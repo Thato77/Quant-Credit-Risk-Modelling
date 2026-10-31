@@ -43,6 +43,15 @@ The dataset is exported in this completely unstructured format with no column na
 |Pg Admin & PostgreSQL Server|SQL for querying the data, and preparing it for modelling|
 |Visual Studio Code|Python for Data Preparation and Modelling|
 
+### 5. Methodology 
+
+#### 5.1 General Data Preparation 
+
+```mermaid
+flowchart TD
+A([Start]) --> B[Data Acquisition - Download Origination & Performance files]
+B -->C([End])
+```
 
 
 
