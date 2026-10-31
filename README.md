@@ -26,7 +26,45 @@ The project builds an end-to-end quantitative credit risk model for residential 
 |Dataset Type|Sample dataset, collected exported as text files |
 |Vintage| 2020 origination year (starting point)|
 |Sample Size| Close to 50 000 unique records(Loans)|
-|Files Used| Origination file + Monthly Performance file for 2020 vintage|
+|Files Used| Origination file + Monthly Performance file for 2020 vintage and File Layout for the features|
+
+###### Features
+|Origination |Monthly Performance|
+|--|--|
+|Credit Score|Loan Sequence Number|
+|First Payment Date|Monthly Reporting Period|
+|First Time Homebuyer Flag|Current Actual UPB|
+|Maturity Date|Current Loan Delinquency Status|
+|Metropolitan Statistical Area (MSA) Or Metropolitan Division|Loan Age|
+|Mortgage Insurance Percentage (MI %)|Remaining Months to Legal Maturity|
+|Number of Units|Defect Settlement Date|
+|Occupancy Status|Modification Flag|
+|Original Combined Loan-to-Value (CLTV)|Zero Balance Code|
+|Original Debt-to-Income (DTI) Ratio|Zero Balance Effective Date|
+|Original UPB|Current Interest Rate|
+|Original Loan-to-Value (LTV)|Current Deferred UPB|
+|Original Interest Rate|Due Date of Last Paid Installment (DDLPI)|
+|Channel|MI Recoveries|
+|Prepayment Penalty Mortgage (PPM) Flag|Net Sales Proceeds|
+|Amortization Type (Formerly Product Type)|Non MI Recoveries|
+|Property State|Expenses|
+|Property Type|Legal Costs|
+|Postal Code|Maintenance and Preservation Costs|
+|Loan Sequence Number|Taxes and Insurance|
+|Loan Purpose|Miscellaneous Expenses|
+|Original Loan Term|Actual Loss Calculation|
+|Number of Borrowers|Modification Cost|
+|Seller Name|Step Modification Flag|
+|Servicer Name|Deferred Payment Plan|
+|Super Conforming Flag|Estimated Loan-to-Value (ELTV)|
+|Pre-HARP Loan Sequence Number|Zero Balance Removal UPB|
+|Program Indicator|Delinquent Accrued Interest|
+|HARP Indicator|Delinquency Due to Disaster|
+|Property Valuation Method|Borrower Assistance Status Code|
+|Interest Only (I/O) Indicator|Current Month Modification Cost|
+|Mortgage Insurance Cancellation Indicator|Interest Bearing UPB|
+
+
 
 <img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/573bdaf8-ee68-437c-abf8-7be25fc92d11" />
 
@@ -55,6 +93,8 @@ The dataset is exported in this completely unstructured format with no column na
 #### 5.1. Probability of Default Model 
 
 ##### 5.1.1. Data Preparation for the PD-Model
+
+ - 
 
 
 
