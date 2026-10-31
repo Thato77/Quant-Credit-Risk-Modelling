@@ -28,7 +28,8 @@ The project builds an end-to-end quantitative credit risk model for residential 
 |Sample Size| Close to 50 000 unique records(Loans)|
 |Files Used| Origination file + Monthly Performance file for 2020 vintage|
 
-<img width="1406" height="731" alt="image" src="https://github.com/user-attachments/assets/bfddd2b4-46a6-4774-9d0a-256324c1ca09" />
+<img width="1200" height="737" alt="image" src="https://github.com/user-attachments/assets/573bdaf8-ee68-437c-abf8-7be25fc92d11" />
+
 
 
 
