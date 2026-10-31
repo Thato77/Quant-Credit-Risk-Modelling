@@ -20,4 +20,5 @@ The project builds an end-to-end quantitative credit risk model for residential 
 
 ### 3.  Data Scope
 
-| ---|
+|Aspect|Description|
+|------|------------|
