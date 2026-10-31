@@ -22,3 +22,9 @@ The project builds an end-to-end quantitative credit risk model for residential 
 
 |Aspect|Description|
 |------|------------|
+|Source|
+|Dataset Type|
+|Vintage|
+|Sample Size|
+|Files Used|
+
