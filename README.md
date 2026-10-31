@@ -94,9 +94,25 @@ The dataset is exported in this completely unstructured format with no column na
 
 ##### 5.1.1. Data Preparation for the PD-Model
 
-The PD-Model is built on the data that is available before the borrower actually defaults, and this essentially most of the features from the origination dataset. We use the \line{Current Loan Delinquency Status} to derive the default indicator variable. The default variable(indicator) is created by setting the indicator as Good(as 0) if the \line{Current Loan Delinquency Status} is with the set {00,01,02}, otherwise set it to Bad(as 1). Here Good means the borrower did not default and Bad means the borrower defaulted. The Default Indicator table is then joined to the Origination table.  One thin we are supposed to watch out here, is to not use the data that was only available after the default, as it will cause leakage. The flow is as follows:
+The PD-Model is built on the data that is available before the borrower actually defaults, and this essentially most of the features from **mortgage_2020_orig** table. We use the \line{Current Loan Delinquency Status} to derive the default indicator variable. The default variable(indicator) is created by setting the indicator as *Good(as 0)* if the *Current Loan Delinquency Status* is within the set **{00,01,02}**, otherwise set it to *Bad(as 1)*. Here Good means the borrower did not default and Bad means the borrower defaulted. The Default Indicator table is then joined to **mortgage_2020_orig** table.  One thing we are supposed to watch out here, is to not use the data that was only available after the default, as it will cause leakage. The flow is as follows:
 
-- 
+- Indicator/Target variable construction: 90+ DPD default default definition from *Current Loan Delinquency Status*, loan-level "ever-bad" aggregation
+- Use the SQL Joins on *Loan Sequence Number* as a primary & foreign key, to merge the target variable to **mortgage_2020_orig**
+- Feature Selection
+   - Exploratory Data Analysis, using the target variable as hue(category on the plots) to observe the relationship.
+   - Build the correlation matrix, and the heatmap plot for correlation to determine the pairwise relationships for the numerical/continuous features. If two variables have very high correlation, then drop one of them to avoid the multi-collinearity problem.
+   - Drop the features that are nulls almost everywhere.
+   - Create dummy variable for categorical variables using pd.get_dummies()
+   - Weight of Evidence (To find the predictive power of each categorical feature)
+     - We first split the dataset, into train and test sets.
+     -  Build the general WoE function, which takes the *var* as an argument. The function perform the proportions of goods and bad, and return the table for the Weight of Evidence and Information Value
+     -  Build a general function that takes the WoE table and plots the WoE values by the categories for that variable *var*
+     -  Consider variables that have large IV values, greater than *0.3* (strong predictive power). But the variables with very high IV, we delete them as that is too good to be true or they might be of the data leakage set.
+     -  To built the WoE on the continuous variables, each variable is *fine classed*, to obtain the intervals and then those intervals are put into the WoE function, as the new categorical representation for that particular continuous variable.
+   - Collect the column names, for the columns to be used, including the ones that are newly constructed through WoE.[Reference Variables & All the Variables]
+   - Create the two tables for the training set, as *pd_data_inputs_train* and *pd_data_target_train* and save them into the database.
+
+  - We do not create the new Weight of Evidences and select variables on the test set, in fact we apply the WoE derived from the train set, and obtain the same column names. !!!
 
 
 
