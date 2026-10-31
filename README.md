@@ -22,7 +22,7 @@ The project builds an end-to-end quantitative credit risk model for residential 
 
 |Aspect|Description|
 |------|------------|
-|Source| [Freddie Mac 2020]([url](https://claritydownload.fmapps.freddiemac.com/CRT/?_gl=1*1vz5e7s*_gcl_au*MjAyMzI2MDQzMy4xNzkzNDU3MjE4Li0uLS4xNzkzNDU3MjM3LjExNDU4MzI4NTEuMTc5MzQ1NzIzOC4xNzkzNDU3MjYy*_ga*MjAwMDAxMjA3Mi4xNzkzNDU3MjQ2*_ga_B5N0FKC09S*czE3OTM0NTcyNDUkbzEkZzEkdDE3OTM0NTcyNjMkajQyJGwwJGgw#/sflld))|
+|Source| [Freddie Mac 2020](https://claritydownload.fmapps.freddiemac.com/CRT/?_gl=1*1vz5e7s*_gcl_au*MjAyMzI2MDQzMy4xNzkzNDU3MjE4Li0uLS4xNzkzNDU3MjM3LjExNDU4MzI4NTEuMTc5MzQ1NzIzOC4xNzkzNDU3MjYy*_ga*MjAwMDAxMjA3Mi4xNzkzNDU3MjQ2*_ga_B5N0FKC09S*czE3OTM0NTcyNDUkbzEkZzEkdDE3OTM0NTcyNjMkajQyJGwwJGgw#/sflld)|
 |Dataset Type| |
 |Vintage||
 |Sample Size||
