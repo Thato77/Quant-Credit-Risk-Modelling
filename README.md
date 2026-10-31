@@ -17,3 +17,7 @@ The project builds an end-to-end quantitative credit risk model for residential 
    - Utilize Streamlit for model deployment, provided that the validation is good to strong.
    - Run basic stress-testing scenarios to see how ECL and default rates change under extreme macro conditions
    - Present findings in clear, professional format (report + visuals) suitable for a portfolio
+
+### 3.  Data Scope
+
+| ---|
