@@ -49,7 +49,7 @@ The dataset is exported in this completely unstructured format with no column na
 
 ```mermaid
 flowchart TD
-A([Start]) --> B[Data Acquisition - Download Origination & Performance files]
+A([Data Acquisition - Download Origination & Performance files]) --> B[Data Acquisition - Download Origination & Performance files]
 B -->C([End])
 ```
 
