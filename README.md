@@ -22,9 +22,12 @@ The project builds an end-to-end quantitative credit risk model for residential 
 
 |Aspect|Description|
 |------|------------|
-|Source| [Freddie Mac 2020](https://claritydownload.fmapps.freddiemac.com/CRT/?_gl=1*1vz5e7s*_gcl_au*MjAyMzI2MDQzMy4xNzkzNDU3MjE4Li0uLS4xNzkzNDU3MjM3LjExNDU4MzI4NTEuMTc5MzQ1NzIzOC4xNzkzNDU3MjYy*_ga*MjAwMDAxMjA3Mi4xNzkzNDU3MjQ2*_ga_B5N0FKC09S*czE3OTM0NTcyNDUkbzEkZzEkdDE3OTM0NTcyNjMkajQyJGwwJGgw#/sflld)|
-|Dataset Type| |
-|Vintage||
-|Sample Size||
-|Files Used| |
+|Source| Freddie Mac Single-Family Loan-Level Dataset - [Freddie Mac 2020](https://claritydownload.fmapps.freddiemac.com/CRT/?_gl=1*1vz5e7s*_gcl_au*MjAyMzI2MDQzMy4xNzkzNDU3MjE4Li0uLS4xNzkzNDU3MjM3LjExNDU4MzI4NTEuMTc5MzQ1NzIzOC4xNzkzNDU3MjYy*_ga*MjAwMDAxMjA3Mi4xNzkzNDU3MjQ2*_ga_B5N0FKC09S*czE3OTM0NTcyNDUkbzEkZzEkdDE3OTM0NTcyNjMkajQyJGwwJGgw#/sflld)|
+|Dataset Type|Sample dataset, collected exported as text files |
+|Vintage| 2020 origination year (starting point)|
+|Sample Size| Close to 50 000 unique records(Loans)|
+|Files Used| Origination file + Monthly Performance file for 2020 vintage|
+
+<img width="2806" height="902" alt="image" src="https://github.com/user-attachments/assets/2f045a19-39a9-4fa3-ae21-c5f3ea19b0ac" />
+
 
