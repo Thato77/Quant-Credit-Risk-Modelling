@@ -47,11 +47,16 @@ The dataset is exported in this completely unstructured format with no column na
 
 #### 5.1 General Data Preparation 
 
+    - Data Acquisition - Download Freddie Mac 2020 sample dataset, Origination & Performance files
+    - Mortgage Credit Risk Database - PostgreSQL/PgAdmin schema for the two tables (This involves creating the tables ; mortgage_2020_orig & mortgage_2020_perf with the column names specified on the Freddie mac page, and lastly inserting the exported data into the two tables)
+    - Primary/Foreign Keys - Loan Sequence Number (mortgage_2020_orig); Loan Sequence Number + Monthly Reporting Period (mortgage_2020_perf)
+    - Python For Further Preprocessing - Applying df.info() to understand the data structures and data types, df.describe() for statistical description, Handling Null values using seaborn heatmap(),  Exploratory Data Analysis using seaborn, matplotlib, plotly libraries.
+
 ```mermaid
 flowchart TD
 A([Start]) --> B[Data Acquisition - Download Origination & Performance files]
 B --> C[Mortgage Credit Risk Database - PostgreSQL/PgAdmin schema for the downloaded files]
-C --> D[Create the empty tables mortgage_2020_orig & mortgage_2020_orig with the right columns, following the data structures]
+C --> D[Create the empty tables mortgage_2020_orig & mortgage_2020_perf with the right columns, following the data structures]
 D --> E[Insert the data exported into the tables.]
 B -->C([End])
 ```
