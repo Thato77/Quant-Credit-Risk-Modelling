@@ -31,8 +31,8 @@ The project builds an end-to-end quantitative credit risk model for residential 
 <img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/573bdaf8-ee68-437c-abf8-7be25fc92d11" />
 
 
-The dataset is exported in this completely unstructured format with no column names included:
 
+The dataset is exported in this completely unstructured format with no column names included:
 <img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/5dda235c-216c-4670-a70a-92bc7eba2345" />
 
 
