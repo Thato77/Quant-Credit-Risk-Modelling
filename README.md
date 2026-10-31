@@ -8,5 +8,5 @@ The project builds an end-to-end quantitative credit risk model for residential 
 
 ### 2. Objectives
 
-   -
-     -
+   - T
+     - P
