@@ -49,7 +49,10 @@ The dataset is exported in this completely unstructured format with no column na
 
 ```mermaid
 flowchart TD
-A([Data Acquisition - Download Origination & Performance files]) --> B[Data Acquisition - Download Origination & Performance files]
+A([Start]) --> B[Data Acquisition - Download Origination & Performance files]
+B --> C[Mortgage Credit Risk Database - PostgreSQL/PgAdmin schema for the downloaded files]
+C --> D[Create the empty tables mortgage_2020_orig & mortgage_2020_orig with the right columns, following the data structures]
+D --> E[Insert the data exported into the tables.]
 B -->C([End])
 ```
 
