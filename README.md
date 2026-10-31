@@ -35,6 +35,14 @@ The project builds an end-to-end quantitative credit risk model for residential 
 The dataset is exported in this completely unstructured format with no column names included:
 <img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/5dda235c-216c-4670-a70a-92bc7eba2345" />
 
+### 4. Technical Tools/Software Involved.
+
+|Tool|The Use|
+|------|------------|
+|Excel |For simple understanding of the data, and preparing the column names for the datasets|
+|Pg Admin & PostgreSQL Server|SQL for querying the data, and preparing it for modelling|
+|Visual Studio Code|Python for Data Preparation and Modelling|
+
 
 
 
