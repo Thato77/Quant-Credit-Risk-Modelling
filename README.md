@@ -94,7 +94,9 @@ The dataset is exported in this completely unstructured format with no column na
 
 ##### 5.1.1. Data Preparation for the PD-Model
 
- - 
+The PD-Model is built on the data that is available before the borrower actually defaults, and this essentially most of the features from the origination dataset. We use the \line{Current Loan Delinquency Status} to derive the default indicator variable. The default variable(indicator) is created by setting the indicator as Good(as 0) if the \line{Current Loan Delinquency Status} is with the set {00,01,02}, otherwise set it to Bad(as 1). Here Good means the borrower did not default and Bad means the borrower defaulted. The Default Indicator table is then joined to the Origination table.  One thin we are supposed to watch out here, is to not use the data that was only available after the default, as it will cause leakage. The flow is as follows:
+
+- 
 
 
 
