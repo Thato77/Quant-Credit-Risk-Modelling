@@ -139,15 +139,18 @@ The PD-Model is built on the data that is available before the borrower actually
        $\therefore$ The calibration condition is satisfied, and threshold is chosen to be *0.0226*
 
      ####### Connecting the Threshold problem to Bayes Theorem.
-     Recall Bayes Theorem : $P( A | B ) = \frac{P(A)P( B | A)}{P(B)}$
+     Recall Bayes Theorem :
+      $P( A | B ) = \frac{P(A)P( B | A)}{P(B)}$
      In our case we have : $P( y = 1 | X ) = \frac{P( y = 1 )P( X | y = 1)}{P(X)}$
      Where
+  
       $P( y = 1 | X )$: Probability of being Bad, given the features X (Sometimes called Posterior),
       $P( y = 1)$: Proportion of Bad loans( The initial Bad Rate (Sometimes called Prior,
       $P(X)$: How common these features are, across all loans.
       $P( X | y = 1)$: How do the features $\text{X}$ behave for Bad loans.
 
      Here $P ( y = 1) = 2.3%$, implying that $P( y = 1 | X )$ get smaller, and this lowers the threshold for Bad loans.
+     
      In summary; every prediction the model makes, is the likelihood features multiplied by the Bad rate, and since the Bad rate is smaller, every Posterior gets pulled down to zero, which is why the $0.5$ does not apply in this imbalanced class case, and why the threshold close to prior fixes the problem.
      
 
