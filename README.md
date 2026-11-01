@@ -119,22 +119,37 @@ The PD-Model is built on the data that is available before the borrower actually
 
 - Training the Model
    - Set up the data for training, by setting the train as the variable selected for the PD-Model and drop the reference variables. The target train is the column named *Bad*( i.e it shows 0 for non-default and 1 for default)
-   - Import the LogisticRegression() algorithm  from sklean.linear_model, and fit (X_train,y_train), for the model pd_model to learn.
+   - Import the $LogisticRegression()$ algorithm  from sklean.linear_model, and fit (X_train,y_train), for the model pd_model to learn.
    - Display the model coefficients, including the intercept.
 - Model Estimation(Part 1 - Default Prediction)
    - Apply the pd_model.predict() on X_test, to predict the default target (*Bad*)
    - Notice that when we predict, the default cutoff/threshold to decide whether the loan is Bad is *0.5*, but this type of prediction only applies to a balanced class problem.
    - In our case we have 14661 Goods and 339 Goods, so we are having an imbalanced class problem. 
-   - We obtained that the maximum probability of being Bad = 0.43. So *P(y_test = Bad)<default threshold*
-     \therefore The model does not catch any bad borrower, with this particular threshold.
+   - We obtained that the maximum probability of being Bad = 0.43. So $P(y_test = \text{Bad})<default threshold$*
+     $\therefore$ The model does not catch any bad borrower, with this particular threshold.
    - *precision, recall and f1-score* are all *0.00*
    - To solve this, a threshold choice strategy must be used. 
 
 - Model Estimation(Part 2 - Choosing a better Threshold)
-   A natural idea of picking the threshold, is to use the average probability of being Bad (i.e the Bad rate = \frac{789}{35000}, the expectation of the actual target from the training set (X_train,y_train). However, the data has to satisfy the calibration condition first.
+   A natural idea of picking the threshold, is to use the average probability of being Bad (i.e the Bad rate = $\frac{789}{35000}$, the expectation of the actual target from the training set (X_train,y_train). However, the data has to satisfy the calibration condition first.
    - Calibration Check
      In short a model predicted probabilities are calibrated if among all cases predicted to have probability p of being Bad, approximately p proportion actually are Bad.
-     - Mathematically ($E[\hat p] \approx E[y] = P( y = Bad )$
+     - Mathematically (If this : $E[\hat p] \approx E[y] = P( y = \text{Bad}, is true we set threshold $\approx p$)
+     - The expectation of the actual target (Bad) is *0.0226000*, and it is approximately equal to the average predicted probability across the whole population which is *0.0226145*
+       $\therefore$ The calibration condition is satisfied, and threshold is chosen to be *0.0226*
+
+     ####### Connecting the Threshold problem to Bayes Theorem.
+     Recall Bayes Theorem : $P( A | B ) = \frac{P(A)P( B | A)}{P(B)}$
+     In our case we have : $P( y = 1 | X ) = \frac{P( y = 1 )P( X | y = 1)}{P(X)}$
+     Where
+      $P( y = 1 | X )$: Probability of being Bad, given the features X (Sometimes called Posterior),
+      $P( y = 1)$: Proportion of Bad loans( The initial Bad Rate (Sometimes called Prior,
+      $P(X)$: How common these features are, across all loans.
+      $P( X | y = 1)$: How do the features $\text{X}$ behave for Bad loans.
+
+     Here $P ( y = 1) = 2.3%$, implying that $P( y = 1 | X )$ get smaller, and this lowers the threshold for Bad loans.
+     In summary; every prediction the model makes, is the likelihood features multiplied by the Bad rate, and since the Bad rate is smaller, every Posterior gets pulled down to zero, which is why the $0.5$ does not apply in this imbalanced class case, and why the threshold close to prior fixes the problem.
+     
 
 
 
