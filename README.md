@@ -115,6 +115,26 @@ The PD-Model is built on the data that is available before the borrower actually
   - We do not create the new Weight of Evidences and select variables on the test set, in fact we apply the WoE derived from the train set, and obtain the same column names. !!!
 
 
+ ##### 5.1.2. Model Estimation and Validation
+
+- Training the Model
+   - Set up the data for training, by setting the train as the variable selected for the PD-Model and drop the reference variables. The target train is the column named *Bad*( i.e it shows 0 for non-default and 1 for default)
+   - Import the LogisticRegression() algorithm  from sklean.linear_model, and fit (X_train,y_train), for the model pd_model to learn.
+   - Display the model coefficients, including the intercept.
+- Model Estimation(Part 1 - Default Prediction)
+   - Apply the pd_model.predict() on X_test, to predict the default target (*Bad*)
+   - Notice that when we predict, the default cutoff/threshold to decide whether the loan is Bad is *0.5*, but this type of prediction only applies to a balanced class problem.
+   - In our case we have 14661 Goods and 339 Goods, so we are having an imbalanced class problem. 
+   - We obtained that the maximum probability of being Bad = 0.43. So *P(y_test = Bad)<default threshold*
+     \therefore The model does not catch any bad borrower, with this particular threshold.
+   - *precision, recall and f1-score* are all *0.00*
+   - To solve this, a threshold choice strategy must be used. 
+
+- Model Estimation(Part 2 - Choosing a better Threshold)
+   A natural idea of picking the threshold, is to use the average probability of being Bad (i.e the Bad rate = \frac{789}{35000}, the expectation of the actual target from the training set (X_train,y_train). However, the data has to satisfy the calibration condition first.
+   - Calibration Check
+     In short a model predicted probabilities are calibrated if among all cases predicted to have probability p of being Bad, approximately p proportion actually are Bad.
+     - Mathematically ($E[\hat p] \approx E[y] = P( y = Bad )$
 
 
 
