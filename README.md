@@ -117,11 +117,11 @@ The PD-Model is built on the data that is available before the borrower actually
 
  ##### 5.1.2. Model Estimation and Validation
 
-- Training the Model
+- **Training the Model**
    - Set up the data for training, by setting the train as the variable selected for the PD-Model and drop the reference variables. The target train is the column named *Bad*( i.e it shows 0 for non-default and 1 for default)
    - Import the $LogisticRegression()$ algorithm  from sklean.linear_model, and fit (X_train,y_train), for the model pd_model to learn.
    - Display the model coefficients, including the intercept.
-- Model Estimation(Part 1 - Default Prediction)
+- **Model Estimation(Part 1 - Default Prediction)**
    - Apply the pd_model.predict() on X_test, to predict the default target (*Bad*)
    - Notice that when we predict, the default cutoff/threshold to decide whether the loan is Bad is *0.5*, but this type of prediction only applies to a balanced class problem.
    - In our case we have 14661 Goods and 339 Goods, so we are having an imbalanced class problem. 
@@ -130,7 +130,7 @@ The PD-Model is built on the data that is available before the borrower actually
    - *precision, recall and f1-score* are all *0.00*
    - To solve this, a threshold choice strategy must be used. 
 
-- Model Estimation(Part 2 - Choosing a better Threshold)
+- **Model Estimation(Part 2 - Choosing a better Threshold)**
    A natural idea of picking the threshold, is to use the average probability of being Bad (i.e the Bad rate = $\frac{789}{35000}$, the expectation of the actual target from the training set (X_train,y_train). However, the data has to satisfy the calibration condition first.
    - Calibration Check
      In short a model predicted probabilities are calibrated if among all cases predicted to have probability p of being Bad, approximately p proportion actually are Bad.
@@ -158,10 +158,22 @@ The PD-Model is built on the data that is available before the borrower actually
      
       $P( X | y = 1)$: How do the features $\text{X}$ behave for Bad loans.
 
-     Here $P ( y = 1) = 2.3%$, implying that $P( y = 1 | X )$ get smaller, and this lowers the threshold for Bad loans.
+     Here $P ( y = 1) = 2.3$ %, implying that $P( y = 1 | X )$ get smaller, and this lowers the threshold for Bad loans.
      
      In summary; every prediction the model makes, is the likelihood features multiplied by the Bad rate, and since the Bad rate is smaller, every Posterior gets pulled down to zero, which is why the $0.5$ does not apply in this imbalanced class case, and why the threshold close to prior fixes the problem.
-     
+
+ - **Model Evaluation & Validation**
+   -- Confusion Matrix structured as :
+   |Predicted Good|Predicted Bad|
+   Actually Good |True Negative (TN)|False Positive (FP)|
+   Actually Bad |False Negative (FN)|True Positive (TP)|
+   -- Classification Report.
+
+Recall the classification metrices: Accuracy, Precision, Recall.
+
+$Accuracy = \frac{TP+TN}{TP+TN+FP+FN}
+Observe that the number of loans that the model flagged as Bad and were actually Bad has improved to 245. The precision for Bad loans increased from *0.00* to *0.05*, as well as the recall and f1-score with respective values *0.72* and *0.10*.
+
      
 
 
