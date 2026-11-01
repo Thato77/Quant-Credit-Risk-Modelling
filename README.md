@@ -134,7 +134,7 @@ The PD-Model is built on the data that is available before the borrower actually
    A natural idea of picking the threshold, is to use the average probability of being Bad (i.e the Bad rate = $\frac{789}{35000}$, the expectation of the actual target from the training set (X_train,y_train). However, the data has to satisfy the calibration condition first.
    - Calibration Check
      In short a model predicted probabilities are calibrated if among all cases predicted to have probability p of being Bad, approximately p proportion actually are Bad.
-     - Mathematically (If this : $E[\hat p] \approx E[y] = P( y = \text{Bad}, is true we set threshold $\approx p$)
+     - Mathematically (If the statement : $E[\hat p] \approx E[y] = P( y = \text{Bad}$ is true we set threshold $\approx p$)
      - The expectation of the actual target (Bad) is *0.0226000*, and it is approximately equal to the average predicted probability across the whole population which is *0.0226145*
        $\therefore$ The calibration condition is satisfied, and threshold is chosen to be *0.0226*
 
@@ -142,16 +142,20 @@ The PD-Model is built on the data that is available before the borrower actually
      
      Recall Bayes Theorem :
      
-      $P( A | B ) = \frac{P(A)P( B | A)}{P(B)}$
+      $$P( A | B ) = \frac{P(A)P( B | A)}{P(B)}$$
+     
      In our case we have :
 
-      $P( y = 1 | X ) = \frac{P( y = 1 )P( X | y = 1)}{P(X)}$
+      $$P( y = 1 | X ) = \frac{P( y = 1 )P( X | y = 1)}{P(X)}$$
      
      Where
   
       $P( y = 1 | X )$: Probability of being Bad, given the features X (Sometimes called Posterior),
+     
       $P( y = 1)$: Proportion of Bad loans( The initial Bad Rate (Sometimes called Prior,
+     
       $P(X)$: How common these features are, across all loans.
+     
       $P( X | y = 1)$: How do the features $\text{X}$ behave for Bad loans.
 
      Here $P ( y = 1) = 2.3%$, implying that $P( y = 1 | X )$ get smaller, and this lowers the threshold for Bad loans.
