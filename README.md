@@ -165,6 +165,7 @@ The PD-Model is built on the data that is available before the borrower actually
  - **Model Evaluation & Validation**
    -- Confusion Matrix structured as :
    |Predicted Good|Predicted Bad|
+   |--|--|
    Actually Good |True Negative (TN)|False Positive (FP)|
    Actually Bad |False Negative (FN)|True Positive (TP)|
    -- Classification Report.
