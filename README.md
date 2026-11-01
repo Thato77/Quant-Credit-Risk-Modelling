@@ -163,17 +163,29 @@ The PD-Model is built on the data that is available before the borrower actually
      In summary; every prediction the model makes, is the likelihood features multiplied by the Bad rate, and since the Bad rate is smaller, every Posterior gets pulled down to zero, which is why the $0.5$ does not apply in this imbalanced class case, and why the threshold close to prior fixes the problem.
 
  - **Model Evaluation & Validation**
-   -- Confusion Matrix structured as :
-   |Predicted Good|Predicted Bad|
-   |--|--|
-   Actually Good |True Negative (TN)|False Positive (FP)|
-   Actually Bad |False Negative (FN)|True Positive (TP)|
-   -- Classification Report.
+   - Confusion Matrix structured as :
+   |Actual Good/Bad|Predicted Good|Predicted Bad|
+   |--|--|--|
+   |Actually Good |True Negative (TN)|False Positive (FP)|
+   |Actually Bad |False Negative (FN)|True Positive (TP)|
 
-Recall the classification metrices: Accuracy, Precision, Recall.
+   We have obtained :
+   
+   - Classification Report.
 
-$Accuracy = \frac{TP+TN}{TP+TN+FP+FN}
-Observe that the number of loans that the model flagged as Bad and were actually Bad has improved to 245. The precision for Bad loans increased from *0.00* to *0.05*, as well as the recall and f1-score with respective values *0.72* and *0.10*.
+Recall the classification metrices: Accuracy, Precision, Recall are defined as follows,
+
+$Accuracy = \frac{TP+TN}{TP+TN+FP+FN}$ (The proportion of all predictions that were correctly classified)
+
+$Precision = \frca{TP}{TP+FP}$ (Out of all loans flagged as Bad, how much was actually Bad)
+
+$Recall = \frac{TP}/{TP+FN}$ (Out of all loans that were actually Bad, how much did the model catch)
+
+Observe that the number of loans that the model flagged as Bad and were actually Bad has improved to 245. The precision for Bad loans increased from *0.00* to *0.05*, as well as the recall and f1-score with the respective values *0.72* and *0.10*.
+
+Accuracy is not a good metric to rely on in situations of imbalanced class, because generally it will be more shifted to the class with higher rate. Initially it was *0.98*, and it has reduced to *0.691$, because more Bad were now predicted correctly. The higher accuracy does not generally imply that the model is doing well!.
+
+
 
      
 
