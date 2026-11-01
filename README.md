@@ -179,7 +179,7 @@ $Accuracy = \frac{TP+TN}{TP+TN+FP+FN}$ (The proportion of all predictions that w
 
 $Precision = \frac{TP}{TP+FP}$ (Out of all loans flagged as Bad, how much was actually Bad)
 
-$Recall = \frac{TP}/{TP+FN}$ (Out of all loans that were actually Bad, how much did the model catch)
+$Recall = \frac{TP}{TP+FN}$ (Out of all loans that were actually Bad, how much did the model catch)
 
 Observe that the number of loans that the model flagged as Bad and were actually Bad has improved to 245. The precision for Bad loans increased from *0.00* to *0.05*, as well as the recall and f1-score with the respective values *0.72* and *0.10*.
 
