@@ -138,8 +138,10 @@ The PD-Model is built on the data that is available before the borrower actually
      - The expectation of the actual target (Bad) is *0.0226000*, and it is approximately equal to the average predicted probability across the whole population which is *0.0226145*
        $\therefore$ The calibration condition is satisfied, and threshold is chosen to be *0.0226*
 
-     ####### Connecting the Threshold problem to Bayes Theorem.
+     Connecting the Threshold problem to Bayes Theorem.
+     
      Recall Bayes Theorem :
+     
       $P( A | B ) = \frac{P(A)P( B | A)}{P(B)}$
      In our case we have : $P( y = 1 | X ) = \frac{P( y = 1 )P( X | y = 1)}{P(X)}$
      Where
