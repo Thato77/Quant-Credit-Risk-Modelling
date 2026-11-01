@@ -158,6 +158,7 @@ The PD-Model is built on the data that is available before the borrower actually
      
      In summary; every prediction the model makes, is the likelihood features multiplied by the Bad rate, and since the Bad rate is smaller, every Posterior gets pulled down to zero, which is why the $0.5$ does not apply in this imbalanced class case, and why the threshold close to prior fixes the problem.
      
+     
 
 
 
