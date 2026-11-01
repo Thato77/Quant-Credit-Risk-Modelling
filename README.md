@@ -143,7 +143,10 @@ The PD-Model is built on the data that is available before the borrower actually
      Recall Bayes Theorem :
      
       $P( A | B ) = \frac{P(A)P( B | A)}{P(B)}$
-     In our case we have : $P( y = 1 | X ) = \frac{P( y = 1 )P( X | y = 1)}{P(X)}$
+     In our case we have :
+
+      $P( y = 1 | X ) = \frac{P( y = 1 )P( X | y = 1)}{P(X)}$
+     
      Where
   
       $P( y = 1 | X )$: Probability of being Bad, given the features X (Sometimes called Posterior),
