@@ -152,7 +152,7 @@ The PD-Model is built on the data that is available before the borrower actually
   
       $P( y = 1 | X )$: Probability of being Bad, given the features X (Sometimes called Posterior),
      
-      $P( y = 1)$: Proportion of Bad loans( The initial Bad Rate (Sometimes called Prior,
+      $P( y = 1)$: Proportion of Bad loans( The initial Bad Rate (Sometimes called Prior),
      
       $P(X)$: How common these features are, across all loans.
      
