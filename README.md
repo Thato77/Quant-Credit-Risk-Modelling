@@ -203,13 +203,13 @@ The PD-Model is built on the data that is available before the borrower actually
       - False Positive Rate (FPR), refers to the proportion of actually *Good* loans that were incorrectly flagged as *Bad*.
     
          
-         $FPR = \frac{FP}{TP+TN} = P(thr >= t_0 | y = 0)$
+         $FPR = \frac{FP}{TP+TN} = P(thr \geq t_0 | y = 0)$
          
     
       - True Positive Rate (TPR), refers to the proportion of actually *Bad* loans that were correctly classified (This is Recall)
  
          
-         $TPR = \frac{TP}{TP+FN} = P(thr >= t_0 | y = 1)$
+         $TPR = \frac{TP}{TP+FN} = P(thr \geq t_0 | y = 1)$
          
 
      We now plot the visual representation (ROC Curve), to demonstrate how well the model separate the classes across every possible decision threshold (In 2D & 3D)
