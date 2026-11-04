@@ -227,7 +227,6 @@ $$
 \begin{aligned} 
 g(p) &=  \text{Cum}\_\%\_\text{Bad}(p) \\
 h(p) &=  \text{Cum}\_\%\_\text{Good}(p) \\
-f(p) &= g(p) - h(p)
 \end{aligned}
 $$
  
@@ -235,11 +234,11 @@ $$
 
 
  $$
- \text{KS}\_\text{Coeff} = \text{Max}\{f(p) : p \in [0,1]\}
+ \text{KS}_\text{Coeff} = \text{Max}\{f(p) : p \in [0,1]\}
  $$
 
  $$
- f(2.3)\approx \text{KS\_Coeff}\%
+ f(2.3\%)\approx \text{KS_\text{Coeff}
  $$
  
   
