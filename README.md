@@ -225,7 +225,7 @@ If we define
 
 $$
 \begin{aligned} 
-g(p) &=  1 \\
+g(p) &=  \text{\%} \\
 h(p) &=  1 \\
 \end{aligned}
 $$
