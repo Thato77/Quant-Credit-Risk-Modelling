@@ -226,7 +226,7 @@ If we define
 $g(p) =$ Cum_%_Bad(p)
 
 
- $h(p) = Cum_%_Good(p)$
+ $h(p) =$ Cum_%_Good(p)
 
  
  $\implies$
