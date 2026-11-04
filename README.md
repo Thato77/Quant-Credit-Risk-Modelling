@@ -232,7 +232,7 @@ f(p) &= g(p) - h(p)
  $\implies$
  
  $$
- \text{KS\_Coeff} = \text{Max}\{f(p) : p \in [0,1]\}
+ \text{KS_Coeff} = \text{Max}\{f(p) : p \in [0,1]\}
  $$
 
  $$
