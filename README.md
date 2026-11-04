@@ -129,7 +129,7 @@ The PD-Model is built on the data that is available before the borrower actually
       - In our case we have 14661 Goods and 339 Goods, so we are having an imbalanced class problem. 
       - We obtained that the maximum probability of being Bad = $0.43$. So $P(y_{test} = \text{Bad})<\text{default threshold}$
         $\therefore$ The model does not catch any bad borrower, with this particular threshold.
-      - *precision, recall$ and $f1-score* are all $0.00$
+      - *precision, recall* and *f1-score* are all $0.00$
       - To solve this, a threshold choice strategy must be used.
 
    - **Model Estimation(Part 2 - Choosing a better Threshold)**
@@ -137,11 +137,12 @@ The PD-Model is built on the data that is available before the borrower actually
      - Calibration Check
        In short a model predicted probabilities are calibrated if among all cases predicted to have probability $p$ of being *Bad*, approximately $p$ proportion actually are Bad.
        - Mathematically, if the statement below is true:
-          $$
-          E[\hat p] \approx E[y] = P( y = \text{Bad}
-          $$
+          
+          $E[\hat p] \approx E[y] = P( y = \text{Bad})$
+          
           we set threshold as $\approx p$
        - The expectation of the actual target (Bad) is $0.0226000$, and it is close to the average predicted probability across the whole population which is $0.0226145$
+         
          $\therefore$ The calibration condition is satisfied, and threshold is chosen to be *0.0226*
 
        Connecting the Threshold problem to Bayes Theorem.
