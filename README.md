@@ -227,14 +227,15 @@ $g(p) =$ Cum_%_Bad(p)
 
 
  $h(p) =$ Cum_%_Good(p)
+ $f(p) = g(p) - h(p)$
 
  
  $\implies$
  
- $KS_{Coeff} = \text{Max}\text{{}|g(p)-h(p)| p\in [0,1] \text{}}$
+ $KS_{Coeff} = \text{Max}\text{{}f(p) : p \in [0,1] \text{}}$
 
  
- $(g-h)^{-1}(KS_{Coeff}) \approx 2.3$%
+ $f^{-1}(KS_{Coeff}) \approx 2.3$%
  
   
      
