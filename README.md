@@ -227,7 +227,7 @@ $$\begin{aligned} g(p) =\end{aligned} $$ Cum_%_Bad(p),
 
 $h(p) =$ Cum_%_Good(p),
 
-$f(p) = g(p) - h(p)$
+f(p) = g(p) - h(p)
  
  $\implies$
  
