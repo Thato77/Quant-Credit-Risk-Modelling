@@ -241,7 +241,7 @@ $$
  f(2.3\%)\approx \text{KS_\text{Coeff}
  $$
 
- $4\text{%}$
+ $4\percent$
   
      
 
