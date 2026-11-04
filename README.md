@@ -187,6 +187,51 @@ Observe that the number of loans that the model flagged as Bad and were actually
 
 Accuracy is not a good metric to rely on in situations of imbalanced class, because it will be more shifted to the class with higher rate. Initially it was *0.98*, and it has reduced to *0.691$, because more Bad were now predicted correctly. The higher accuracy does not generally imply that the model is doing well!.
 
+   - Receiver Operating Characteristic(ROC).
+  
+     The ROC simply show the relationship between *False Positive Rate* and *True Positive Rate* across every possible threshold in $\text{[0,1]}$.
+     
+      - False Positive Rate (FPR), refers to the proportion of actually *Good* loans that were incorrectly flagged as *Bad*.
+    
+         $FPR = \frac{FP}{TP+TN} = P(thr >= t_0 | y = 0)$
+    
+      - True Positive Rate (TPR), refers to the proportion of actually *Bad* loans that were correctly classified (This is Recall)
+ 
+         $TPR = \frac{TP}{TP+FN} = P(thr >= t_0 | y = 1)$
+
+     We now show the visual representation (ROC Curve), to show how well the model separate the classes across every possible decision threshold.(2D & 3D)
+
+     From the plot, we see the model does have some discrimination power, with the *AUC = 0.759*. This falls in the *acceptable to good* category for risk models.
+     AUC is known as the Area Under Curve score, and it summarizes the models' ability to rank correctly, completely separate from wherever the classification threshold ends up being set. [Note this is a property of the model, not used as a decision rule for prediction]
+
+     - Gini Coefficient and CAP Lorentz Curve
+
+       The CAP Lorentz Curve, also known as Gini Curve is used to visualize the cumulative accuracy profile of the model. It shows the *Cumulative Proportion of Bad Loans* (Proportion of Bad loans captured so far) versus *Cumulative Proportion of the Population* (Proportion of the population included so far).
+       The Gini tells us the net rate at which the model correctly ranks a random *Bad* loan above a random *Good* loan. We obtained :
+  $\text{Gini} = 2\text{AUC}-1 = 2\times{0.759} - 1 = 0.518$.
+
+       So the model strongly separates  Bad borrowers from Good borrowers. Across 100 random comparisons  between defaulting and non-defaulting loans, it correctly identifies one roughly and gets it backwards about 24-times ($100\times{(1-0.76)}$), for a net discriminatory power of *0.518*.        This is consistent with , and upper end of a typical performance for a mortgage PD-Scorecards.
+
+
+ - Kolmogorov-Sminorv (KS) Statistic and the Curve
+
+   The KS curve plots two separate cumulative distribution against the predicted probability of being *Bad*.
+
+     - Cum_%_Bad/Good - Cumulative proportion of actual *Bad*/*Good loans as probability increases.
+       
+     The KS-Statistic (Coefficient) is the maximum vertical distance between the two cumulative curves at any given probability value. It is intuitively the point where the model does best job of separating the two population classes (i.e the probability value at which *Bad* loans captured by far and *Good* loans captured by far, diverge the most).
+     Here *KS = 0.42*, which indicates a strong separation band. Actually if you observe carefully, the strongest KS value, is approximately positioned in the chosen threshold, which creates an additional empirical support for the threshold we chose. Mathematically :
+If we define
+
+ $g(p) = Cum_%_Bad(p)$
+ $h(p) = Cum_%_Good(p)$
+ $\implies$
+ $KS_Coeff = \text{Max}_{p\in [0,1]}|g(p)-h(p)|$
+ $ (g-h)^{-1}(KS_Coeff) \approx 2.3$%
+ 
+  
+     
+
 
 
 
