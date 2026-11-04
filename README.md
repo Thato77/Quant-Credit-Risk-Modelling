@@ -225,8 +225,8 @@ If we define
 
 $$
 \begin{aligned} 
-g(p) &=  \text{Cum}\_\%\_\text{Bad}(p) \\
-h(p) &=  \text{Cum}\_\%\_\text{Good}(p) \\
+g(p) &=  1 \\
+h(p) &=  1 \\
 \end{aligned}
 $$
  
@@ -238,7 +238,7 @@ $$
  $$
 
  $$
- f(2.3\text{%})\approx \text{KS_\text{Coeff}
+ f(2.3\%)\approx \text{KS_\text{Coeff}
  $$
  
   
