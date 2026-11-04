@@ -238,7 +238,7 @@ $$
  $$
 
  $$
- f(2.3\%)\approx \text{KS_\text{Coeff}
+ f(2.3\text{%})\approx \text{KS_\text{Coeff}
  $$
  
   
