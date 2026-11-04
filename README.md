@@ -231,10 +231,10 @@ $g(p) =$ Cum_%_Bad(p)
  
  $\implies$
  
- $KS_Coeff = \text{Max}_{p\in [0,1]}|g(p)-h(p)|$
+ $KS_{Coeff} = \text{Max}_{p\in [0,1]}|g(p)-h(p)|$
 
  
- $ (g-h)^{-1}(KS_Coeff) \approx 2.3$%
+ $ (g-h)^{-1}(KS_{Coeff}) \approx 2.3$%
  
   
      
