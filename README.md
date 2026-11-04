@@ -223,11 +223,15 @@ Accuracy is not a good metric to rely on in situations of imbalanced class, beca
      Here *KS = 0.42*, which indicates a strong separation band. Actually if you observe carefully, the strongest KS value, is approximately positioned in the chosen threshold, which creates an additional empirical support for the threshold we chose. Mathematically :
 If we define
 
-$g(p) =$ Cum_%_Bad(p), $h(p) =$ Cum_%_Good(p),  $f(p) = g(p) - h(p)$
+$g(p) =$ Cum_%_Bad(p),
+
+$h(p) =$ Cum_%_Good(p),
+
+$f(p) = g(p) - h(p)$
  
  $\implies$
  
- $KS_{Coeff} = \text{Max}{f(p) : p \in [0,1]}$
+ $KS_{Coeff} = \text{Max}\{f(p) : p \in [0,1]\}$
 
  
  $f^{-1}(KS_{Coeff}) \approx 2.3$%
