@@ -225,8 +225,8 @@ If we define
 
 $$
 \begin{aligned} 
-g(p) &=  \text{Cum\_\%_Bad}(p) \\
-h(p) &=  \text{Cum\_\%_Good}(p) \\
+g(p) &=  \mathrm{Cum\_\% \_Bad}(p) \\
+h(p) &=  \mathrm{Cum\_\% \_Good}(p) \\
 f(p) &= g(p) - h(p)
 \end{aligned}
 $$
