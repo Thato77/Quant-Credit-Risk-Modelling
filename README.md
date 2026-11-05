@@ -128,6 +128,7 @@ The PD-Model is built on the data that is available before the borrower actually
       - Notice that when we predict, the default cutoff/threshold to decide whether the loan is Bad is $0.5$, but this type of prediction only applies to a balanced class problem.
       - In our case we have 14661 Goods and 339 Goods, so we are having an imbalanced class problem. 
       - We obtained that the maximum probability of being Bad = $0.43$. So $P(y_{test} = \text{Bad})<\text{default threshold}$
+
         $\therefore$ The model does not catch any bad borrower, with this particular threshold.
       - *precision, recall* and *f1-score* are all $0.00$
       - To solve this, a threshold choice strategy must be used.
