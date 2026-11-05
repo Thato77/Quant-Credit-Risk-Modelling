@@ -229,7 +229,7 @@ The PD-Model is built on the data that is available before the borrower actually
 
    - Kolmogorov-Sminorv (KS) Statistic and the Curve
 
-   The KS curve plots two separate cumulative distributions against the predicted probability of being *Bad*.
+      The KS curve plots two separate cumulative distributions against the predicted probability of being *Bad*.
 
    - Cum_%_Bad/Good - Cumulative proportion of actual *Bad*/*Good loans as probability increases.
        
