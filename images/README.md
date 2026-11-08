@@ -33,7 +33,28 @@
 
 ##### 2.2.1. General Analysis 
 
+| | |
+|--|--|
+|Exploring the pd-data (The Merged table) <img width="1351" height="654" alt="Screenshot 2026-11-07 002607" src="https://github.com/user-attachments/assets/ec28b7f4-cdd2-4aa6-aca3-c8dd77ab1e0f" />| Exploratory Data Analysis (1) <img width="1321" height="437" alt="Screenshot 2026-11-07 002701" src="https://github.com/user-attachments/assets/56bcc1a6-5b08-4f4d-bcda-bcd17a473a04" /> |
+| Exploratory Data Analysis (2) <img width="1288" height="717" alt="Screenshot 2026-11-07 002818" src="https://github.com/user-attachments/assets/82bcf11e-5c78-4e07-b5e3-a58ddfec40ef" /> | Exploratory Data Analysis (2) <img width="1328" height="453" alt="Screenshot 2026-11-07 002907" src="https://github.com/user-attachments/assets/9adce6a7-630c-4344-97f8-a0347d1ec7f5" /> |
+| Exploratory Data Analysis (4)<img width="1284" height="423" alt="Screenshot 2026-11-07 002919" src="https://github.com/user-attachments/assets/eb0931f5-b79d-48cc-970f-6d647970f4e3" /> | Exploratory Data Analysis (5) <img width="1337" height="529" alt="Screenshot 2026-11-07 003459" src="https://github.com/user-attachments/assets/11d77ece-42b3-427c-b6be-fa2737a01b10" />|
+| Correlation on pd-data (To avoid multi-collinearity) <img width="1330" height="672" alt="Screenshot 2026-11-07 003656" src="https://github.com/user-attachments/assets/6516c156-d41c-4a55-9d81-d207f0b837bc" /> | Dropping the Nulls and Splitting the Data into Train and Test sets <img width="1352" height="557" alt="Screenshot 2026-11-07 003745" src="https://github.com/user-attachments/assets/00c83f97-ae64-4eb0-9434-f09edeb4e95e" />|
 
+##### 2.2.2. Weight of Evidence and Information Values
+
+| | |
+|--|--|
+|Weight of Evidence Function for Categorical Variables <img width="1339" height="577" alt="Screenshot 2026-11-07 003812" src="https://github.com/user-attachments/assets/77eb0d00-e38e-4212-9c06-16f6fa0fa4cf" />| Collecting the Categorical Variables' Names <img width="1344" height="198" alt="Screenshot 2026-11-07 003841" src="https://github.com/user-attachments/assets/dd11a85a-f5d5-4f3f-85ba-cda50a0629f5" />|
+| Weight of Evidence for  <img width="1336" height="709" alt="Screenshot 2026-11-07 003926" src="https://github.com/user-attachments/assets/f798c295-65d6-4c4a-9b12-e536e04ae83d" />|    
+
+
+
+
+
+
+
+
+ 
 
 
 
