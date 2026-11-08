@@ -20,8 +20,15 @@
 |Correlation on Continuous Variables (Monthly Performance) <img width="1336" height="703" alt="Screenshot 2026-11-07 001308" src="https://github.com/user-attachments/assets/857fe5a5-db6b-46b9-b15e-d3ff978fdf38" />||
 
 
+### 2. Probability of Default Data Preparation
 
-| 
+#### 2.1. Construction of the Indicator/Target Variable
+
+| | | 
+|--|--|
+|<img width="1852" height="283" alt="unnamed" src="https://github.com/user-attachments/assets/57c3d281-e175-491b-bba6-a36d6856d8c6" />| <img width="1824" height="386" alt="unnamed1" src="https://github.com/user-attachments/assets/a5ce8387-b4a2-4f26-b13b-9b329acdf99f" />|
+
+
 
 
 
