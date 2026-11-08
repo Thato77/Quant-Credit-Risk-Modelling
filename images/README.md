@@ -56,8 +56,9 @@
 
 | | | 
 |--|--|
-| Setting Up the Data for Training <img width="1375" height="232" alt="Screenshot 2026-11-07 005234" src="https://github.com/user-attachments/assets/34e91633-3e78-4b6b-9e66-1f4f78267704" /> | <img width="1348" height="532" alt="Screenshot 2026-11-07 005253" src="https://github.com/user-attachments/assets/9887cc60-7e44-49d0-8b47-a8c8ddd046b0" />|
-| Coefficients Learned by the Model <img width="1340" height="585" alt="Screenshot 2026-11-07 005330" src="https://github.com/user-attachments/assets/c184ad39-8172-45a6-b625-06297a142325" />| <img width="1335" height="448" alt="Screenshot 2026-11-07 005452" src="https://github.com/user-attachments/assets/a19c5541-75c6-4bf7-958c-3f8108504e03" />|
+| Setting Up the Data for Training <img width="1375" height="232" alt="Screenshot 2026-11-07 005234" src="https://github.com/user-attachments/assets/34e91633-3e78-4b6b-9e66-1f4f78267704" /> | Training the Model <img width="1348" height="532" alt="Screenshot 2026-11-07 005253" src="https://github.com/user-attachments/assets/9887cc60-7e44-49d0-8b47-a8c8ddd046b0" />|
+| Coefficients Learned by the Model <img width="1335" height="448" alt="Screenshot 2026-11-07 005452" src="https://github.com/user-attachments/assets/a19c5541-75c6-4bf7-958c-3f8108504e03" />| <img width="1353" height="276" alt="Screenshot 2026-11-07 005719" src="https://github.com/user-attachments/assets/1a3a42a1-c044-4908-8386-a6e8ab8278b1" />|
+
 
 
 
