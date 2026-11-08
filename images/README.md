@@ -70,6 +70,15 @@
 |Confusion Matrix with Default Threshold (0.5) <img width="326" height="90" alt="Screenshot 2026-11-07 010359" src="https://github.com/user-attachments/assets/9b39fe4c-4320-4df5-99e0-d0a4626743b5" /> | Classification Ratio with Default Threshold |
 | Confusion Matrix with the New Threshold (0.0225) <img width="326" height="88" alt="Screenshot 2026-11-07 010012" src="https://github.com/user-attachments/assets/e7d74c9d-11cd-4a38-9d7e-f7091d50a14d" /> | Classification Ratio with the New Threshold (0.0225) <img width="557" height="157" alt="Screenshot 2026-11-07 010130" src="https://github.com/user-attachments/assets/72e7797f-e519-4282-92d7-6636ae845720" />|
 
+#### 3.2. Model Validation/Evaluation
+
+##### 3.2.1. Confusion Matrix and Classification Report
+
+| | |
+|--|--|
+|Confusion Matrix with Default Threshold (0.5) <img width="326" height="90" alt="Screenshot 2026-11-07 010359" src="https://github.com/user-attachments/assets/9b39fe4c-4320-4df5-99e0-d0a4626743b5" /> | Classification Ratio with Default Threshold |
+| Confusion Matrix with the New Threshold (0.0225) <img width="326" height="88" alt="Screenshot 2026-11-07 010012" src="https://github.com/user-attachments/assets/e7d74c9d-11cd-4a38-9d7e-f7091d50a14d" /> | Classification Ratio with the New Threshold (0.0225) <img width="557" height="157" alt="Screenshot 2026-11-07 010130" src="https://github.com/user-attachments/assets/72e7797f-e519-4282-92d7-6636ae845720" />|
+
 ##### 3.2.2. Receiver Operating Characteristics (ROC)
 
 | | |
@@ -89,7 +98,6 @@
 | | | 
 |--|--|
 |<img width="1338" height="701" alt="Screenshot 2026-11-07 011155" src="https://github.com/user-attachments/assets/ed130127-ad4a-4320-bc18-107da29b26c1" /> | <img width="1291" height="486" alt="Screenshot 2026-11-07 011327" src="https://github.com/user-attachments/assets/c0132b5a-de2b-4c7a-9e20-fcdcefa2673b" /> |
-
 
 
 
