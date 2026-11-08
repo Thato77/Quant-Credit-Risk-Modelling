@@ -12,8 +12,11 @@
 
 | | |
 |--|--|
-| Origination Data Structure <img width="1338" height="711" alt="Screenshot 2026-11-06 212411" src="https://github.com/user-attachments/assets/12c82841-6b18-460e-9fa9-2ead8ceeba04" /> | Statistical Description - Origination <img width="1333" height="542" alt="Screenshot 2026-11-06 212442" src="https://github.com/user-attachments/assets/8b0b2e0b-d2da-495a-bdfb-4c25dfd214e8" />|
-| Missing Values - Origination <img width="1378" height="714" alt="Screenshot 2026-11-06 212657" src="https://github.com/user-attachments/assets/91303b02-c57b-41f3-a5ac-abb843285a2c" /> | <img width="1377" height="679" alt="Screenshot 2026-11-06 212741" src="https://github.com/user-attachments/assets/04546453-b231-4407-a49f-2e934df488e4" />|
+| Origination Data Structure <img width="1338" height="711" alt="Screenshot 2026-11-06 212411" src="https://github.com/user-attachments/assets/12c82841-6b18-460e-9fa9-2ead8ceeba04" /> | Statistical Description (Origination) <img width="1333" height="542" alt="Screenshot 2026-11-06 212442" src="https://github.com/user-attachments/assets/8b0b2e0b-d2da-495a-bdfb-4c25dfd214e8" />|
+| Missing Values (Origination) <img width="1378" height="714" alt="Screenshot 2026-11-06 212657" src="https://github.com/user-attachments/assets/91303b02-c57b-41f3-a5ac-abb843285a2c" /> | Continuous Variables (Origination) <img width="1337" height="490" alt="Screenshot 2026-11-07 001336" src="https://github.com/user-attachments/assets/e4be65b5-9e5a-4bfd-a71a-699c653ea1d7" />|
+|Correlation on Continuous Variables in Tabular Form (Origination) <img width="1377" height="618" alt="Screenshot 2026-11-06 212741" src="https://github.com/user-attachments/assets/c1f29cce-88a7-4dc8-868f-8b26340d67ff" />| Correlation on Continuous Variables (Origination) <img width="1318" height="639" alt="Screenshot 2026-11-06 235606" src="https://github.com/user-attachments/assets/7b6171fe-f813-4491-b524-325f4282c550" />|
+
+
 
 
 
