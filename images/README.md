@@ -43,12 +43,22 @@
 ##### 2.2.2. Weight of Evidence and Information Values
 
 | | |
-| | |
 |--|--|
 |Weight of Evidence Function for Categorical Variables <img width="1339" height="577" alt="Screenshot 2026-11-07 003812" src="https://github.com/user-attachments/assets/77eb0d00-e38e-4212-9c06-16f6fa0fa4cf" />| Weight of Evidence for Property State - (Example of WoE for Categorical Variables) <img width="1336" height="709" alt="Screenshot 2026-11-07 003926" src="https://github.com/user-attachments/assets/f798c295-65d6-4c4a-9b12-e536e04ae83d" />| 
 | Collecting the Categorical Variables' Names <img width="1336" height="76" alt="Screenshot 2026-11-07 004403" src="https://github.com/user-attachments/assets/8c45607c-e70d-4937-9aab-15d5fa9e25bf" />|  Weight of Evidence Function for Continuous Variables <img width="1337" height="588" alt="Screenshot 2026-11-07 004018" src="https://github.com/user-attachments/assets/1d3b0581-9533-421c-a415-890efaa10372" />|
 | Weight of Evidence for Original Combined Loan-to-Value (CLTV) (Fine Classed) - (Example of WoE for Continuous Variables) <img width="1330" height="722" alt="Screenshot 2026-11-07 004119" src="https://github.com/user-attachments/assets/8d01a701-e268-45d2-a8ac-efbfa7e2c482" />| Collecting the Continuous Variables' Names <img width="1335" height="77" alt="Screenshot 2026-11-07 004319" src="https://github.com/user-attachments/assets/49e30ee1-de7f-4088-bb84-a87c839a8d8c" />| 
 | Storing the Variables, Train and Test Data for PD-Model <img width="1337" height="251" alt="Screenshot 2026-11-07 004451" src="https://github.com/user-attachments/assets/29aaafa8-73e3-437e-adb7-09bcf68102a9" />| |
+
+
+### 3. Probability of Default Estimation and Model Validation
+
+#### 3.1. Model Training and Estimation
+
+| | | 
+|--|--|
+| Setting Up the Data for Training <img width="1375" height="232" alt="Screenshot 2026-11-07 005234" src="https://github.com/user-attachments/assets/34e91633-3e78-4b6b-9e66-1f4f78267704" /> | <img width="1348" height="532" alt="Screenshot 2026-11-07 005253" src="https://github.com/user-attachments/assets/9887cc60-7e44-49d0-8b47-a8c8ddd046b0" />|
+| Coefficients Learned by the Model <img width="1340" height="585" alt="Screenshot 2026-11-07 005330" src="https://github.com/user-attachments/assets/c184ad39-8172-45a6-b625-06297a142325" />| <img width="1335" height="448" alt="Screenshot 2026-11-07 005452" src="https://github.com/user-attachments/assets/a19c5541-75c6-4bf7-958c-3f8108504e03" />|
+
 
 
 
