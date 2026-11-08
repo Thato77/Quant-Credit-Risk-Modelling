@@ -66,6 +66,7 @@
 ##### 3.2.1. Confusion Matrix and Classification Report
 
 | | |
+|--|--|
 |Confusion Matrix with Default Threshold (0.5) <img width="326" height="90" alt="Screenshot 2026-11-07 010359" src="https://github.com/user-attachments/assets/9b39fe4c-4320-4df5-99e0-d0a4626743b5" /> | Classification Ratio with Default Threshold |
 | Confusion Matrix with the New Threshold (0.0225) <img width="326" height="88" alt="Screenshot 2026-11-07 010012" src="https://github.com/user-attachments/assets/e7d74c9d-11cd-4a38-9d7e-f7091d50a14d" /> | Classification Ratio with the New Threshold (0.0225) <img width="557" height="157" alt="Screenshot 2026-11-07 010130" src="https://github.com/user-attachments/assets/72e7797f-e519-4282-92d7-6636ae845720" />|
 
@@ -82,6 +83,15 @@
 |--|--|
 |Computation of Cumulative Proportions <img width="1334" height="522" alt="Screenshot 2026-11-07 010756" src="https://github.com/user-attachments/assets/faf521aa-be7a-4fab-a8ff-46638321ae67" />| Gini Curve <img width="1285" height="615" alt="Screenshot 2026-11-07 010821" src="https://github.com/user-attachments/assets/b1c25f78-d7ac-4303-b815-6ef890810005" />|
 | The Mathematics to show why does Good Curve is almost a straight line from $(0,0)$ to $(1,1)$ <img width="1336" height="708" alt="Screenshot 2026-11-07 010908" src="https://github.com/user-attachments/assets/4274d40f-5680-41ea-a661-dc4ec4bc8ebb" />|
+
+##### 3.3.4. Kolmogorov Sminorv Statistic
+
+| | | 
+|--|--|
+|<img width="1338" height="701" alt="Screenshot 2026-11-07 011155" src="https://github.com/user-attachments/assets/ed130127-ad4a-4320-bc18-107da29b26c1" /> | <img width="1291" height="486" alt="Screenshot 2026-11-07 011327" src="https://github.com/user-attachments/assets/c0132b5a-de2b-4c7a-9e20-fcdcefa2673b" /> |
+
+
+
 
 
 
