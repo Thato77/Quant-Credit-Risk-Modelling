@@ -97,7 +97,7 @@
 
 | | | 
 |--|--|
-|<img width="1338" height="701" alt="Screenshot 2026-11-07 011155" src="https://github.com/user-attachments/assets/ed130127-ad4a-4320-bc18-107da29b26c1" /> | <img width="1291" height="486" alt="Screenshot 2026-11-07 011327" src="https://github.com/user-attachments/assets/c0132b5a-de2b-4c7a-9e20-fcdcefa2673b" /> |
+| Kolmogorov-Sminorv Coefficient <img width="1200" height="600" alt="Screenshot 2026-11-07 011155" src="https://github.com/user-attachments/assets/ed130127-ad4a-4320-bc18-107da29b26c1" /> | Kolmogorov Sminorv Curve <img width="1291" height="600" alt="Screenshot 2026-11-07 011327" src="https://github.com/user-attachments/assets/c0132b5a-de2b-4c7a-9e20-fcdcefa2673b" /> |
 
 
 
