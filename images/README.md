@@ -57,7 +57,44 @@
 | | | 
 |--|--|
 | Setting Up the Data for Training <img width="1375" height="232" alt="Screenshot 2026-11-07 005234" src="https://github.com/user-attachments/assets/34e91633-3e78-4b6b-9e66-1f4f78267704" /> | Training the Model <img width="1348" height="532" alt="Screenshot 2026-11-07 005253" src="https://github.com/user-attachments/assets/9887cc60-7e44-49d0-8b47-a8c8ddd046b0" />|
-| Coefficients Learned by the Model <img width="1335" height="448" alt="Screenshot 2026-11-07 005452" src="https://github.com/user-attachments/assets/a19c5541-75c6-4bf7-958c-3f8108504e03" />| <img width="1353" height="276" alt="Screenshot 2026-11-07 005719" src="https://github.com/user-attachments/assets/1a3a42a1-c044-4908-8386-a6e8ab8278b1" />|
+| Coefficients Learned by the Model <img width="1335" height="448" alt="Screenshot 2026-11-07 005452" src="https://github.com/user-attachments/assets/a19c5541-75c6-4bf7-958c-3f8108504e03" />| Estimation Using the Default Threshold (0.5) <img width="428" height="418" alt="y_hat_test" src="https://github.com/user-attachments/assets/6fb02602-7d71-4339-9704-7ac90037caca" />| 
+| Calibration Check to Choose an Optimal Threshold <img width="1353" height="226" alt="Screenshot 2026-11-07 005719" src="https://github.com/user-attachments/assets/e9cf28bf-d056-4635-870e-9fae4135518e" /> | Estimation Using Base Bad Rate (Optimal) Threshold <img width="1336" height="488" alt="Screenshot 2026-11-07 005843" src="https://github.com/user-attachments/assets/731d384f-2e0c-46d5-bbf0-7ebe777678e6" />|
+
+
+#### 3.2. Model Validation/Evaluation
+
+##### 3.2.1. Confusion Matrix and Classification Report
+
+| | |
+|Confusion Matrix with Default Threshold (0.5) <img width="326" height="90" alt="Screenshot 2026-11-07 010359" src="https://github.com/user-attachments/assets/9b39fe4c-4320-4df5-99e0-d0a4626743b5" /> | Classification Ratio with Default Threshold |
+| Confusion Matrix with the New Threshold (0.0225) <img width="326" height="88" alt="Screenshot 2026-11-07 010012" src="https://github.com/user-attachments/assets/e7d74c9d-11cd-4a38-9d7e-f7091d50a14d" /> | Classification Ratio with the New Threshold (0.0225) <img width="557" height="157" alt="Screenshot 2026-11-07 010130" src="https://github.com/user-attachments/assets/72e7797f-e519-4282-92d7-6636ae845720" />|
+
+##### 3.2.2. Receiver Operating Characteristics (ROC)
+
+| | |
+|--|--|
+| ROC Curve <img width="1031" height="561" alt="Screenshot 2026-11-07 010526" src="https://github.com/user-attachments/assets/82a74bfd-7713-4322-8910-168a9cfeeecb" /> | ROC Curve in 3D (Threshold as the third axis) <img width="1197" height="695" alt="Screenshot 2026-11-07 010730" src="https://github.com/user-attachments/assets/a1fa21e3-4bc9-47d2-88f3-faac4503f9cf" />|
+| Area Under Curve Score <img width="1334" height="110" alt="Screenshot 2026-11-07 011026" src="https://github.com/user-attachments/assets/729db09a-c6ef-47aa-b4c4-f98c66eb32ea" />| |
+
+##### 3.3.3. Gini Coefficient and Curve
+
+| | | 
+|--|--|
+|Computation of Cumulative Proportions <img width="1334" height="522" alt="Screenshot 2026-11-07 010756" src="https://github.com/user-attachments/assets/faf521aa-be7a-4fab-a8ff-46638321ae67" />| Gini Curve <img width="1285" height="615" alt="Screenshot 2026-11-07 010821" src="https://github.com/user-attachments/assets/b1c25f78-d7ac-4303-b815-6ef890810005" />|
+| The Mathematics to show why does Good Curve is almost a straight line from $(0,0)$ to $(1,1)$ <img width="1336" height="708" alt="Screenshot 2026-11-07 010908" src="https://github.com/user-attachments/assets/4274d40f-5680-41ea-a661-dc4ec4bc8ebb" />|
+
+
+
+
+
+
+
+
+
+
+
+ 
+
 
 
 
