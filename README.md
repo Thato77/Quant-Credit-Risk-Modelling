@@ -135,8 +135,9 @@ The PD-Model is built on the data that is available before the borrower actually
 
    - **Model Estimation(Part 2 - Choosing a better Threshold)**
       A natural choice for the threshold, would be the average probability of being *Bad* (i.e the Bad rate = $\frac{789}{35000}$, the expectation of the actual target from the training set (X_train,y_train). However, the data has to satisfy the calibration condition first.
+     
      - Calibration Check
-
+       
        In short a model predicted probabilities are calibrated if among all cases predicted to have probability $p$ of being *Bad*, approximately $p$ proportion actually are Bad.
        - Mathematically, if the statement below is true:
           
