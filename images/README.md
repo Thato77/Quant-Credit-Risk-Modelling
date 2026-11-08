@@ -99,6 +99,11 @@
 |--|--|
 | Kolmogorov-Sminorv Coefficient <img width="1200" height="600" alt="Screenshot 2026-11-07 011155" src="https://github.com/user-attachments/assets/ed130127-ad4a-4320-bc18-107da29b26c1" /> | Kolmogorov Sminorv Curve <img width="1291" height="600" alt="Screenshot 2026-11-07 011327" src="https://github.com/user-attachments/assets/c0132b5a-de2b-4c7a-9e20-fcdcefa2673b" /> |
 
+### 4. Saving the Probability of Default Model
+
+<img width="1344" height="244" alt="Screenshot 2026-11-07 011510" src="https://github.com/user-attachments/assets/d0ae48f4-98b8-46a8-aa6f-1784cccf6aa4" />
+
+
 
 
 
