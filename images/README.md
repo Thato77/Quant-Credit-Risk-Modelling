@@ -27,8 +27,9 @@
 | | | 
 |--|--|
 | Exploring the Current Loan Delinquency Status <img width="1377" height="688" alt="Screenshot 2026-11-07 002413" src="https://github.com/user-attachments/assets/8ebb9b53-2652-4c43-89df-e2621076b735" />| Creating the Indicator/Target Variable <img width="1377" height="536" alt="Screenshot 2026-11-07 002500" src="https://github.com/user-attachments/assets/d6608b01-a4b0-461a-98c9-85131c84ce88" />|
-|<img width="1351" height="654" alt="Screenshot 2026-11-07 002607" src="https://github.com/user-attachments/assets/0c9ab312-6195-45e3-8773-a3d853f4aff3" />| <img width="1852" height="283" alt="unnamed" src="https://github.com/user-attachments/assets/c334a57b-9eba-475e-b3b9-a4ccfef1bf37" /> |
-|<img width="1824" height="386" alt="unnamed1" src="https://github.com/user-attachments/assets/35b43349-d76e-4f18-b989-9fee521587f6" />||
+| Saving the Target Variable in the Database <img width="1852" height="283" alt="unnamed" src="https://github.com/user-attachments/assets/4e87c1fd-7466-4483-b94a-d19464563de5" />| Merging the Target(Bad) Variable to the Preprocessed Origination Table (SQL Query)<img width="1824" height="386" alt="unnamed1" src="https://github.com/user-attachments/assets/fcfe75f7-4a72-4452-89f0-25b3debe4111" />| 
+
+
 
 
 
