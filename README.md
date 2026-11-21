@@ -253,8 +253,11 @@ The PD-Model is built on the data that is available before the borrower actually
 
    - Cum_%_Bad/Good - Cumulative proportion of actual *Bad*/*Good* loans as probability increases.
        
-   The $\text{KS-Statistic}$ (Coefficient) is the maximum vertical distance between the two cumulative curves at any given probability value. It is intuitively the point where the model does best job of separating the two population classes (i.e the probability value at which *Bad* loans captured by far and *Good* loans captured by far, diverge the most).
-     Here $\text{KS}_{\text{Coeff}} = 0.42$, which indicates a strong separation band. Actually if you observe carefully, the strongest KS value, is approximately positioned in the neighborhood of the chosen threshold, which creates an additional empirical support for the threshold we chose. Mathematically,
+   The $\text{KS-Statistic}$ (Coefficient) is the maximum vertical distance between the two cumulative curves at any given probability value. It is intuitively the point where the model does best job of separating the two population classes (i.e the probability value at which *Bad* loans captured by far and *Good* loans captured by far, diverge the most). Visually we have:
+
+ |<img width="1197" height="446" alt="image" src="https://github.com/user-attachments/assets/00672a22-853a-401c-88a1-ec23af8616f4" />|
+
+   Here $\text{KS}_{\text{Coeff}} = 0.375$, which indicates a strong separation band. Actually if you observe carefully, the strongest KS value, is approximately positioned in the neighborhood of the chosen threshold, which creates an additional empirical support for the threshold we chose. Mathematically,
 If we define
 
 $$
