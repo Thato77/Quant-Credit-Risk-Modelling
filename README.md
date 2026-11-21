@@ -203,9 +203,9 @@ The PD-Model is built on the data that is available before the borrower actually
    | -- | -- |
    | <img width="520" height="140" alt="image" src="https://github.com/user-attachments/assets/6f009502-0f09-458d-ad35-80dd8a4217d3" />| <img width="520" height="140" alt="image" src="https://github.com/user-attachments/assets/30b41a03-5ec1-46c7-8071-ef8d2ba52a72" />|
       
-   Observe that the number of loans that the model flagged as *Bad* and were actually *Bad* has improved to $245$. The precision for Bad loans increased from $0.00$ to $0.05$, as well as the recall and f1-score with the respective values $0.72$ and $0.10$.
+   Observe that the number of loans that the model flagged as *Bad* and were actually *Bad* has improved to $205$. The precision for Bad loans increased from $0.00$ to $0.044$, as well as the recall and f1-score with the respective values $0.655$ and $0.0822$.
 
-   Accuracy is not a good metric to rely on, more especially in situations of imbalanced classes, because it will be more shifted to the class with higher rate. Initially it was $0.98$, and it has reduced to $0.691$, as more $Bad$ loans were now predicted correctly. The higher accuracy does not generally imply that the model is doing well!.
+   Accuracy is not a good metric to rely on, more especially in situations of imbalanced classes, because it will be more shifted to the class with higher rate. Initially it was $0.979$, and it has reduced to $0.695$, as more $Bad$ loans were now predicted correctly. The higher accuracy does not generally imply that the model is doing well!.
 
    - Receiver Operating Characteristic(ROC).
   
@@ -244,7 +244,12 @@ The PD-Model is built on the data that is available before the borrower actually
 <img width="800" height="450" alt="image" src="https://github.com/user-attachments/assets/d29b9fc1-8d48-4686-a680-3ff0369c2b34" />
 
 
- So the model strongly separates *Bad* borrowers from *Good* borrowers. Across $100$ random comparisons between defaulting and non-defaulting loans, it correctly identifies one roughly and gets it backwards about $24$-times ($100\times{(1-0.76)}$), for a net discriminatory power of *0.518*. This is consistent with , and upper end of a typical performance for a mortgage PD-Scorecards.
+ So the model strongly separates *Bad* borrowers from *Good* borrowers. Across $100$ random comparisons between defaulting and non-defaulting loans, it correctly identifies one roughly and gets it backwards about $25$-times ($100\times{(1-0.75)}$), for a net discriminatory power of *0.501*. This is consistent with , and upper end of a typical performance for a mortgage PD-Scorecards.
+ 
+ We interpret the Gini Curve (Lorenz) mathematically.
+ Let $x$ be the cumulative proportion of the population (population cutoff) $\in [0,1]$ (i.e first $nx$ sorted loans). Define 
+$$F_{\text{bad}}(x) = Cum_{\text{Prop Bad}}(x)$$
+
 
 
    - Kolmogorov-Sminorv (KS) Statistic and the Curve
