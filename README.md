@@ -248,31 +248,31 @@ The PD-Model is built on the data that is available before the borrower actually
        We interpret the Gini Curve (Lorenz) mathematically.
        Let $x$ be the cumulative proportion of the population (population cutoff) $\in [0,1]$ (i.e first $nx$ sorted loans). Define:
  
-       $$F_{\text{bad}}(x) = Cum_{\text{Prop Bad}}(x)$$
+$$F_{\text{bad}}(x) = Cum_{\text{Prop Bad}}(x)$$
 
-       $$F_{\text{good}}(x) = Cum_{\text{Prop Good}}(x)$$
+$$F_{\text{good}}(x) = Cum_{\text{Prop Good}}(x)$$
 
-       Where $n_1$ and $n_2$ represent the number of bad loans and good loans espectively.
+   Where $n_1$ and $n_2$ represent the number of bad loans and good loans espectively.
 
-       Then 
+   Then 
 
-       $$\text{BadCount} = n_1F_{\text{bad}}(x)$$
+$$\text{BadCount} = n_1F_{\text{bad}}(x)$$
 
-       $$\text{GoodCount} = nx - n_1F_{\text{bad}}(x)$$
+$$\text{GoodCount} = nx - n_1F_{\text{bad}}(x)$$
 
-       $\implies$
+$\implies$
 
-       $$F_{\text{good}}(x) = \frac{nx - n_1F_{\text{bad}}(x)}{n_0}$$
+$$F_{\text{good}}(x) = \frac{nx - n_1F_{\text{bad}}(x)}{n_0}$$
 
-       $$F_{\text{good}}(x) =\frac{n}{n_0}x - \frac{n_1}{n_0}F_{\text{bad}}(x)$$
+$$F_{\text{good}}(x) =\frac{n}{n_0}x - \frac{n_1}{n_0}F_{\text{bad}}(x)$$
 
-       $$F_{\text{good}}(x) = (1+\frac{n_1}{n_0})x - \frac{n_1}{n_0}F_\text{bad}(x)$$
+$$F_{\text{good}}(x) = (1+\frac{n_1}{n_0})x - \frac{n_1}{n_0}F_\text{bad}(x)$$
 
-       $\because n = n_0+n_1$
+$\because n = n_0+n_1$
 
-       $$F_{\text{good}}(x) = x - \frac{n_1}{n_0}(x - F_\text{bad}(x)$$
+$$F_{\text{good}}(x) = x - \frac{n_1}{n_0}(x - F_\text{bad}(x)$$
 
-       This clearly explains why the cumulative % goods curve, is approximately a diagonal line from $(0,0)$ to $(1,1)$.
+   This clearly explains why the cumulative % goods curve, is approximately a diagonal line from $(0,0)$ to $(1,1)$.
 
 
 
@@ -305,7 +305,7 @@ $$
  $$
 
  $$
- F(2.3\\%)\approx \text{KS}_\text{Coeff}
+ F(2.4\\%)\approx \text{KS}_\text{Coeff}
  $$
 
 
