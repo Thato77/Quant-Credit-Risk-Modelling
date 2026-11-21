@@ -136,7 +136,7 @@ The PD-Model is built on the data that is available before the borrower actually
    - **Model Estimation(Part 2 - Choosing a better Threshold)**
       A natural choice for the threshold, would be the average probability of being *Bad* (i.e the Bad rate = $\frac{789}{35000}$, the expectation of the actual target from the training set (X_train,y_train). However, the data has to satisfy the calibration condition first.
      
-     - Calibration Check
+      - Calibration Check
        
        In short a model predicted probabilities are calibrated if among all cases predicted to have probability $p$ of being *Bad*, approximately $p$ proportion actually are Bad.
        - Mathematically, if the statement below is true:
@@ -148,89 +148,89 @@ The PD-Model is built on the data that is available before the borrower actually
          
          $\therefore$ The calibration condition is satisfied, and threshold is chosen to be *0.0226*
 
-       Connecting the Threshold problem to Bayes Theorem.
+         Connecting the Threshold problem to Bayes Theorem.
      
-       Recall Bayes' Theorem :
+         Recall Bayes' Theorem :
      
        
-          $P( A | B ) = \frac{P(A)P( B | A)}{P(B)}$
+         $P( A | B ) = \frac{P(A)P( B | A)}{P(B)}$
        
      
-       In our case we have :
+         In our case we have :
 
        
-          $P( y = 1 | X ) = \frac{P( y = 1 )P( X | y = 1)}{P(X)}$
+         $P( y = 1 | X ) = \frac{P( y = 1 )P( X | y = 1)}{P(X)}$
        
      
-       Where
+         Where
   
-       - $P( y = 1 | X )$: Probability of being *Bad*, given the features X ( Sometimes called Posterior),
+         - $P( y = 1 | X )$: Probability of being *Bad*, given the features X ( Sometimes called Posterior),
      
-       - $P( y = 1)$: Proportion of *Bad* loans( The initial Bad Rate (Sometimes called Prior),
+         - $P( y = 1)$: Proportion of *Bad* loans( The initial Bad Rate (Sometimes called Prior),
      
-       - $P(X)$: How common these features are, across all loans.
+         - $P(X)$: How common these features are, across all loans.
      
-       - $P( X | y = 1)$: How do the features $\text{X}$ behave for Bad loans.
+         - $P( X | y = 1)$: How do the features $\text{X}$ behave for Bad loans.
 
-       Here $P ( y = 1) = 2.4$ %, implying that $P( y = 1 | X )$ get smaller, and this lowers the threshold for Bad loans.
+         Here $P ( y = 1) = 2.4$ %, implying that $P( y = 1 | X )$ get smaller, and this lowers the threshold for Bad loans.
      
        In summary; every prediction the model makes, is the likelihood features multiplied by the Bad rate, and since the Bad rate is smaller, every Posterior gets pulled down to zero, which is why the $0.5$ does not apply in this imbalanced class case, and why the threshold close to prior fixes the problem.
 
    - **Model Evaluation & Validation**
       - Confusion Matrix structured as :
      
-   |Actual Good/Bad|Predicted Good|Predicted Bad|
-   |--|--|--|
-   |Actual Good |True Negative (TN)|False Positive (FP)|
-   |Actual Bad |False Negative (FN)|True Positive (TP)|
+     |Actual Good/Bad|Predicted Good|Predicted Bad|
+     |--|--|--|
+     |Actual Good |True Negative (TN)|False Positive (FP)|
+     |Actual Bad |False Negative (FN)|True Positive (TP)|
 
-   We obtained :
-   | Default Threshold| Optimized Threshold|
-   | -- | -- |
-   |<img width="310" height="80" alt="image" src="https://github.com/user-attachments/assets/3ccaa630-5481-4428-ad1f-56925cc9e988" />| <img width="310" height="80" alt="image" src="https://github.com/user-attachments/assets/390bf411-51aa-4b01-abdc-d4f99d493ce8" />|
-   - Classification Report.
-     Recall the classification metrics: Accuracy, Precision, Recall are defined as follows,
-     
-     - $\text{Accuracy} = \frac{TP+TN}{TP+TN+FP+FN}$ (The proportion of all predictions that were correctly classified)
-     
-     - $\text{Precision} = \frac{TP}{TP+FP}$ (Out of all loans flagged as *Bad*, how much was actually *Bad*)
-       
-     - $\text{Recall} = \frac{TP}{TP+FN}$ (Out of all loans that were actually *Bad*, how much did the model catch)
-       
      We obtained :
-
-   | Default Threshold| Optimized Threshold|
-   | -- | -- |
-   | <img width="520" height="140" alt="image" src="https://github.com/user-attachments/assets/6f009502-0f09-458d-ad35-80dd8a4217d3" />| <img width="520" height="140" alt="image" src="https://github.com/user-attachments/assets/30b41a03-5ec1-46c7-8071-ef8d2ba52a72" />|
-      
-   Observe that the number of loans that the model flagged as *Bad* and were actually *Bad* has improved to $205$. The precision for Bad loans increased from $0.00$ to $0.044$, as well as the recall and f1-score with the respective values $0.655$ and $0.0822$.
-
-   Accuracy is not a good metric to rely on, more especially in situations of imbalanced classes, because it will be more shifted to the class with higher rate. Initially it was $0.979$, and it has reduced to $0.695$, as more $Bad$ loans were now predicted correctly. The higher accuracy does not generally imply that the model is doing well!.
-
-   - Receiver Operating Characteristic(ROC).
-  
-     The ROC simply shows the relationship between *False Positive Rate* and *True Positive Rate* across every possible threshold in $\text{[0,1]}$.
+     | Default Threshold| Optimized Threshold|
+     | -- | -- |
+     |<img width="310" height="80" alt="image" src="https://github.com/user-attachments/assets/3ccaa630-5481-4428-ad1f-56925cc9e988" />| <img width="310" height="80" alt="image" src="https://github.com/user-attachments/assets/390bf411-51aa-4b01-abdc-d4f99d493ce8" />|
+      - Classification Report.
+        Recall the classification metrics: Accuracy, Precision, Recall are defined as follows,
      
-      - False Positive Rate (FPR), refers to the proportion of actually *Good* loans that were incorrectly flagged as *Bad*.
+        - $\text{Accuracy} = \frac{TP+TN}{TP+TN+FP+FN}$ (The proportion of all predictions that were correctly classified)
+     
+        - $\text{Precision} = \frac{TP}{TP+FP}$ (Out of all loans flagged as *Bad*, how much was actually *Bad*)
+       
+        - $\text{Recall} = \frac{TP}{TP+FN}$ (Out of all loans that were actually *Bad*, how much did the model catch)
+       
+        We obtained :
+
+        | Default Threshold| Optimized Threshold|
+        | -- | -- |
+        | <img width="520" height="140" alt="image" src="https://github.com/user-attachments/assets/6f009502-0f09-458d-ad35-80dd8a4217d3" />| <img width="520" height="140" alt="image" src="https://github.com/user-attachments/assets/30b41a03-5ec1-46c7-8071-ef8d2ba52a72" />|
+      
+        Observe that the number of loans that the model flagged as *Bad* and were actually *Bad* has improved to $205$. The precision for Bad loans increased from $0.00$ to $0.044$, as well as the recall and f1-score with the respective values $0.655$ and $0.0822$.
+
+       Accuracy is not a good metric to rely on, more especially in situations of imbalanced classes, because it will be more shifted to the class with higher rate. Initially it was $0.979$, and it has reduced to $0.695$, as more $Bad$ loans were now predicted correctly. The higher accuracy does not generally imply that the model is doing well!.
+
+      - Receiver Operating Characteristic(ROC).
+  
+        The ROC simply shows the relationship between *False Positive Rate* and *True Positive Rate* across every possible threshold in $\text{[0,1]}$.
+     
+        - False Positive Rate (FPR), refers to the proportion of actually *Good* loans that were incorrectly flagged as *Bad*.
     
          
          $FPR = \frac{FP}{TP+TN} = P(thr \geq t_0 | y = 0)$
          
     
-      - True Positive Rate (TPR), refers to the proportion of actually *Bad* loans that were correctly classified (This is Recall)
+        - True Positive Rate (TPR), refers to the proportion of actually *Bad* loans that were correctly classified (This is Recall)
  
          
          $TPR = \frac{TP}{TP+FN} = P(thr \geq t_0 | y = 1)$
          
 
-     We now plot the visual representation (ROC Curve), to demonstrate how well the model separate the classes across every possible decision threshold (In 2D & 3D) :
+        We now plot the visual representation (ROC Curve), to demonstrate how well the model separate the classes across every possible decision threshold (In 2D & 3D) :
 
-     | ROC Curve  | ROC in 3D |
-     | -- | --|
-     |<img width="800" height="450" alt="image" src="https://github.com/user-attachments/assets/c6128fee-9c3a-4d01-9d7a-6f7d3a02d43b" /> | <img width="800" height="450" alt="image" src="https://github.com/user-attachments/assets/4e2f949c-17b8-4a3f-807f-6ad4f99afec0" />|
+         | ROC Curve  | ROC in 3D |
+         | -- | --|
+         |<img width="800" height="450" alt="image" src="https://github.com/user-attachments/assets/c6128fee-9c3a-4d01-9d7a-6f7d3a02d43b" /> | <img width="800" height="450" alt="image" src="https://github.com/user-attachments/assets/4e2f949c-17b8-4a3f-807f-6ad4f99afec0" />|
 
 
-     From the plot, we see the model does have some discrimination power, with the $\text{AUC} = 0.751$. This falls in the *acceptable to good* category for risk models.
+          From the plot, we see the model does have some discrimination power, with the $\text{AUC} = 0.751$. This falls in the *acceptable to good* category for risk models.
      $\text{AUC}$ is known as the Area Under Curve score, and it summarizes the models' ability to rank correctly, completely separate from wherever the classification threshold ends up being set. [Note this is a property of the model, not used as a decision rule for prediction]
 
    - Gini Coefficient and CAP Lorentz Curve
@@ -238,31 +238,55 @@ The PD-Model is built on the data that is available before the borrower actually
       The CAP Lorentz Curve, also known as Gini Curve is used to visualize the cumulative accuracy profile of the model. It shows the *Cumulative Proportion of Bad Loans* (Proportion of Bad loans captured so far) versus *Cumulative Proportion of the Population* (Proportion of the population included so far).
        The Gini tells us the net rate at which the model correctly ranks a random *Bad* loan above a random *Good* loan.
 
-     We obtained :
+       We obtained :
      
-  $\text{Gini} = 2\text{AUC}-1 = 2\times{0.751} - 1 = 0.501$.
-<img width="800" height="450" alt="image" src="https://github.com/user-attachments/assets/d29b9fc1-8d48-4686-a680-3ff0369c2b34" />
+       $\text{Gini} = 2\text{AUC}-1 = 2\times{0.751} - 1 = 0.501$.
+       <img width="800" height="450" alt="image" src="https://github.com/user-attachments/assets/d29b9fc1-8d48-4686-a680-3ff0369c2b34" />
 
-
- So the model strongly separates *Bad* borrowers from *Good* borrowers. Across $100$ random comparisons between defaulting and non-defaulting loans, it correctly identifies one roughly and gets it backwards about $25$-times ($100\times{(1-0.75)}$), for a net discriminatory power of *0.501*. This is consistent with , and upper end of a typical performance for a mortgage PD-Scorecards.
+       So the model strongly separates *Bad* borrowers from *Good* borrowers. Across $100$ random comparisons between defaulting and non-defaulting loans, it correctly identifies one roughly and gets it backwards about $25$-times ($100\times{(1-0.75)}$), for a net discriminatory power of *0.501*. This is consistent with , and upper end of a typical performance for a mortgage PD-Scorecards.
  
- We interpret the Gini Curve (Lorenz) mathematically.
- Let $x$ be the cumulative proportion of the population (population cutoff) $\in [0,1]$ (i.e first $nx$ sorted loans). Define 
-$$F_{\text{bad}}(x) = Cum_{\text{Prop Bad}}(x)$$
+       We interpret the Gini Curve (Lorenz) mathematically.
+       Let $x$ be the cumulative proportion of the population (population cutoff) $\in [0,1]$ (i.e first $nx$ sorted loans). Define:
+ 
+       $$F_{\text{bad}}(x) = Cum_{\text{Prop Bad}}(x)$$
+
+       $$F_{\text{good}}(x) = Cum_{\text{Prop Good}}(x)$$
+
+       Where $n_1$ and $n_2$ represent the number of bad loans and good loans espectively.
+
+       Then 
+
+       $$\text{BadCount} = n_1F_{\text{bad}}(x)$$
+
+       $$\text{GoodCount} = nx - n_1F_{\text{bad}}(x)$$
+
+       $\implies$
+
+       $$F_{\text{good}}(x) = \frac{nx - n_1F_{\text{bad}}(x)}{n_0}$$
+
+       $$F_{\text{good}}(x) =\frac{n}{n_0}x - \frac{n_1}{n_0}F_{\text{bad}}(x)$$
+
+       $$F_{\text{good}}(x) = (1+\frac{n_1}{n_0})x - \frac{n_1}{n_0}F_\text{bad}(x)$$
+
+       $\because n = n_0+n_1$
+
+       $$F_{\text{good}}(x) = x - \frac{n_1}{n_0}(x - F_\text{bad}(x)$$
+
+       This clearly explains why the cumulative % goods curve, is approximately a diagonal line from $(0,0)$ to $(1,1)$.
 
 
 
    - Kolmogorov-Sminorv (KS) Statistic and the Curve
 
-      The KS curve plots two separate cumulative distributions against the predicted probability of being *Bad*.
+     The KS curve plots two separate cumulative distributions against the predicted probability of being *Bad*.
 
-   - Cum_%_Bad/Good - Cumulative proportion of actual *Bad*/*Good* loans as probability increases.
+     - Cum_%_Bad/Good - Cumulative proportion of actual *Bad*/*Good* loans as probability increases.
        
-   The $\text{KS-Statistic}$ (Coefficient) is the maximum vertical distance between the two cumulative curves at any given probability value. It is intuitively the point where the model does best job of separating the two population classes (i.e the probability value at which *Bad* loans captured by far and *Good* loans captured by far, diverge the most). Visually we have:
+       The $\text{KS-Statistic}$ (Coefficient) is the maximum vertical distance between the two cumulative curves at any given probability value. It is intuitively the point where the model does best job of separating the two population classes (i.e the probability value at which *Bad* loans captured by far and *Good* loans captured by far, diverge the most). Visually we have:
 
- <img width="1197" height="446" alt="image" src="https://github.com/user-attachments/assets/00672a22-853a-401c-88a1-ec23af8616f4" />
+     <img width="1197" height="446" alt="image" src="https://github.com/user-attachments/assets/00672a22-853a-401c-88a1-ec23af8616f4" />
 
-   Here $\text{KS}_{\text{Coeff}} = 0.375$, which indicates a strong separation band. Actually if you observe carefully, the strongest KS value, is approximately positioned in the neighborhood of the chosen threshold, which creates an additional empirical support for the threshold we chose. Mathematically,
+      Here $\text{KS}_{\text{Coeff}} = 0.375$, which indicates a strong separation band. Actually if you observe carefully, the strongest KS value, is approximately positioned in the neighborhood of the chosen threshold, which creates an additional empirical support for the threshold we chose. Mathematically,
 If we define
 
 $$
@@ -291,7 +315,7 @@ The Model Discrimination Metrics Combined.
 | -- | -- |
 | AUR | 0.750555|
 |Gini | 0.501109|
-|KS-Statistic|0.374909|
+|KS-Statistic|0.374909|.
 
      
 
