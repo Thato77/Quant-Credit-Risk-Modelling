@@ -188,12 +188,17 @@ The PD-Model is built on the data that is available before the borrower actually
    | Default Threshold| Optimized Threshold|
    | -- | -- |
    |<img width="310" height="80" alt="image" src="https://github.com/user-attachments/assets/3ccaa630-5481-4428-ad1f-56925cc9e988" />| <img width="310" height="80" alt="image" src="https://github.com/user-attachments/assets/390bf411-51aa-4b01-abdc-d4f99d493ce8" />|
-      - Classification Report.
-        Recall the classification metrics: Accuracy, Precision, Recall are defined as follows,
-        - $\text{Accuracy} = \frac{TP+TN}{TP+TN+FP+FN}$ (The proportion of all predictions that were correctly classified)
-        - $\text{Precision} = \frac{TP}{TP+FP}$ (Out of all loans flagged as *Bad*, how much was actually *Bad*)
-        - $\text{Recall} = \frac{TP}{TP+FN}$ (Out of all loans that were actually *Bad*, how much did the model catch)
-        We obtained : 
+   - Classification Report.
+     Recall the classification metrics: Accuracy, Precision, Recall are defined as follows,
+     
+     - $\text{Accuracy} = \frac{TP+TN}{TP+TN+FP+FN}$ (The proportion of all predictions that were correctly classified)
+     
+     - $\text{Precision} = \frac{TP}{TP+FP}$ (Out of all loans flagged as *Bad*, how much was actually *Bad*)
+       
+     - $\text{Recall} = \frac{TP}{TP+FN}$ (Out of all loans that were actually *Bad*, how much did the model catch)
+       
+     We obtained :
+
    | Default Threshold| Optimized Threshold|
    | -- | -- |
    | <img width="520" height="140" alt="image" src="https://github.com/user-attachments/assets/6f009502-0f09-458d-ad35-80dd8a4217d3" />| <img width="520" height="140" alt="image" src="https://github.com/user-attachments/assets/30b41a03-5ec1-46c7-8071-ef8d2ba52a72" />|
@@ -218,18 +223,28 @@ The PD-Model is built on the data that is available before the borrower actually
          $TPR = \frac{TP}{TP+FN} = P(thr \geq t_0 | y = 1)$
          
 
-     We now plot the visual representation (ROC Curve), to demonstrate how well the model separate the classes across every possible decision threshold (In 2D & 3D)
+     We now plot the visual representation (ROC Curve), to demonstrate how well the model separate the classes across every possible decision threshold (In 2D & 3D) :
 
-     From the plot, we see the model does have some discrimination power, with the $\text{AUC} = 0.759$. This falls in the *acceptable to good* category for risk models.
+     | ROC Curve  | ROC in 3D |
+     | -- | --|
+     |<img width="800" height="450" alt="image" src="https://github.com/user-attachments/assets/c6128fee-9c3a-4d01-9d7a-6f7d3a02d43b" /> | <img width="800" height="450" alt="image" src="https://github.com/user-attachments/assets/4e2f949c-17b8-4a3f-807f-6ad4f99afec0" />|
+
+
+     From the plot, we see the model does have some discrimination power, with the $\text{AUC} = 0.751$. This falls in the *acceptable to good* category for risk models.
      $\text{AUC}$ is known as the Area Under Curve score, and it summarizes the models' ability to rank correctly, completely separate from wherever the classification threshold ends up being set. [Note this is a property of the model, not used as a decision rule for prediction]
 
    - Gini Coefficient and CAP Lorentz Curve
 
       The CAP Lorentz Curve, also known as Gini Curve is used to visualize the cumulative accuracy profile of the model. It shows the *Cumulative Proportion of Bad Loans* (Proportion of Bad loans captured so far) versus *Cumulative Proportion of the Population* (Proportion of the population included so far).
-       The Gini tells us the net rate at which the model correctly ranks a random *Bad* loan above a random *Good* loan. We obtained :
-  $\text{Gini} = 2\text{AUC}-1 = 2\times{0.759} - 1 = 0.518$.
+       The Gini tells us the net rate at which the model correctly ranks a random *Bad* loan above a random *Good* loan.
 
-       So the model strongly separates *Bad* borrowers from *Good* borrowers. Across $100$ random comparisons between defaulting and non-defaulting loans, it correctly identifies one roughly and gets it backwards about $24$-times ($100\times{(1-0.76)}$), for a net discriminatory power of *0.518*. This is consistent with , and upper end of a typical performance for a mortgage PD-Scorecards.
+     We obtained :
+     
+  $\text{Gini} = 2\text{AUC}-1 = 2\times{0.751} - 1 = 0.501$.
+<img width="800" height="450" alt="image" src="https://github.com/user-attachments/assets/d29b9fc1-8d48-4686-a680-3ff0369c2b34" />
+
+
+ So the model strongly separates *Bad* borrowers from *Good* borrowers. Across $100$ random comparisons between defaulting and non-defaulting loans, it correctly identifies one roughly and gets it backwards about $24$-times ($100\times{(1-0.76)}$), for a net discriminatory power of *0.518*. This is consistent with , and upper end of a typical performance for a mortgage PD-Scorecards.
 
 
    - Kolmogorov-Sminorv (KS) Statistic and the Curve
