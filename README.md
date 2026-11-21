@@ -126,8 +126,8 @@ The PD-Model is built on the data that is available before the borrower actually
    - **Model Estimation(Part 1 - Default Prediction)**
       - Apply the pd_model.predict() on X_test, to predict the default target (*Bad*)
       - Notice that when we predict, the default cutoff/threshold to decide whether the loan is Bad is $0.5$, but this type of prediction only applies to a balanced class problem.
-      - In our case we have 14661 Goods and 339 Goods, so we are having an imbalanced class problem. 
-      - We obtained that the maximum probability of being Bad = $0.43$. So $P(y_{test} = \text{Bad})<\text{default threshold}$
+      - In our case we have 35000 Goods and 840 Bads, so we are having an imbalanced class problem. 
+      - We obtained that the maximum probability of being Bad = $0.39$. So $P(y_{test} = \text{Bad})<\text{default threshold}$
 
         $\therefore$ The model does not catch any bad borrower, with this particular threshold.
       - *precision, recall* and *f1-score* are all $0.00$
@@ -144,7 +144,7 @@ The PD-Model is built on the data that is available before the borrower actually
           $E[\hat p] \approx E[y] = P( y = \text{Bad})$
           
           we set threshold as $\approx p$
-       - The expectation of the actual target (Bad) is $0.0226000$, and it is close to the average predicted probability across the whole population which is $0.0226145$
+       - The expectation of the actual target (Bad) is $0.024$, and it is close to the average predicted probability across the whole population which is $0.0242028$
          
          $\therefore$ The calibration condition is satisfied, and threshold is chosen to be *0.0226*
 
@@ -172,12 +172,12 @@ The PD-Model is built on the data that is available before the borrower actually
      
        - $P( X | y = 1)$: How do the features $\text{X}$ behave for Bad loans.
 
-       Here $P ( y = 1) = 2.3$ %, implying that $P( y = 1 | X )$ get smaller, and this lowers the threshold for Bad loans.
+       Here $P ( y = 1) = 2.4$ %, implying that $P( y = 1 | X )$ get smaller, and this lowers the threshold for Bad loans.
      
        In summary; every prediction the model makes, is the likelihood features multiplied by the Bad rate, and since the Bad rate is smaller, every Posterior gets pulled down to zero, which is why the $0.5$ does not apply in this imbalanced class case, and why the threshold close to prior fixes the problem.
 
    - **Model Evaluation & Validation**
-     - Confusion Matrix structured as :
+      - Confusion Matrix structured as :
      
    |Actual Good/Bad|Predicted Good|Predicted Bad|
    |--|--|--|
@@ -185,20 +185,22 @@ The PD-Model is built on the data that is available before the borrower actually
    |Actual Bad |False Negative (FN)|True Positive (TP)|
 
    We obtained :
-   
-   - Classification Report.
+   | Default Threshold| Optimized Threshold|
+   | -- | -- |
+   |<img width="310" height="80" alt="image" src="https://github.com/user-attachments/assets/3ccaa630-5481-4428-ad1f-56925cc9e988" />| <img width="310" height="80" alt="image" src="https://github.com/user-attachments/assets/390bf411-51aa-4b01-abdc-d4f99d493ce8" />|
+      - Classification Report.
+        Recall the classification metrics: Accuracy, Precision, Recall are defined as follows,
+        - $\text{Accuracy} = \frac{TP+TN}{TP+TN+FP+FN}$ (The proportion of all predictions that were correctly classified)
+        - $\text{Precision} = \frac{TP}{TP+FP}$ (Out of all loans flagged as *Bad*, how much was actually *Bad*)
+        - $\text{Recall} = \frac{TP}{TP+FN}$ (Out of all loans that were actually *Bad*, how much did the model catch)
+        We obtained : 
+   | Default Threshold| Optimized Threshold|
+   | -- | -- |
+   | <img width="520" height="140" alt="image" src="https://github.com/user-attachments/assets/6f009502-0f09-458d-ad35-80dd8a4217d3" />| <img width="520" height="140" alt="image" src="https://github.com/user-attachments/assets/30b41a03-5ec1-46c7-8071-ef8d2ba52a72" />|
+      
+   Observe that the number of loans that the model flagged as *Bad* and were actually *Bad* has improved to $245$. The precision for Bad loans increased from $0.00$ to $0.05$, as well as the recall and f1-score with the respective values $0.72$ and $0.10$.
 
-     Recall the classification metrics: Accuracy, Precision, Recall are defined as follows,
-
-     - $\text{Accuracy} = \frac{TP+TN}{TP+TN+FP+FN}$ (The proportion of all predictions that were correctly classified)
-
-     - $\text{Precision} = \frac{TP}{TP+FP}$ (Out of all loans flagged as *Bad*, how much was actually *Bad*)
-
-     - $\text{Recall} = \frac{TP}{TP+FN}$ (Out of all loans that were actually *Bad*, how much did the model catch)
-
-     Observe that the number of loans that the model flagged as *Bad* and were actually *Bad* has improved to $245$. The precision for Bad loans increased from $0.00$ to $0.05$, as well as the recall and f1-score with the respective values $0.72$ and $0.10$.
-
-     Accuracy is not a good metric to rely on, more especially in situations of imbalanced classes, because it will be more shifted to the class with higher rate. Initially it was $0.98$, and it has reduced to $0.691$, as more $Bad$ loans were now predicted correctly. The higher accuracy does not generally imply that the model is doing well!.
+   Accuracy is not a good metric to rely on, more especially in situations of imbalanced classes, because it will be more shifted to the class with higher rate. Initially it was $0.98$, and it has reduced to $0.691$, as more $Bad$ loans were now predicted correctly. The higher accuracy does not generally imply that the model is doing well!.
 
    - Receiver Operating Characteristic(ROC).
   
